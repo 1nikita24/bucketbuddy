@@ -58,7 +58,6 @@ header {
     color: #fed136;
   }
   
-  
   p {
     line-height: 1.75;
     /* background-color: #212529; */
@@ -95,11 +94,6 @@ header {
     padding: 100px 0;
   }
   
-  /* .page-section h2.section-heading {
-    font-size: 40px;
-    margin-top: 0;
-    margin-bottom: 15px;
-  } */
   
   .page-section h3.section-subheading {
     font-size: 16px;
@@ -234,3 +228,12 @@ header {
     text-transform: none;
   }
   
+  /* LEFT BUCKET */
+.user-main {
+    margin-left: 0;
+}
+
+  #left-bucket {
+      background-image: url(../images/sideBucketnobackground.png);
+      background-size: 100%;
+  }
