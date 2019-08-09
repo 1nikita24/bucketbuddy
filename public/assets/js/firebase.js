@@ -15,8 +15,10 @@ firebase.initializeApp(config);
 console.log(firebase);
 // choosing Google Auth Provider to use in firebase auth settings
 // assigning white listed domains where it is allowed (ex: localhost)
-const provider = new firebase.auth.GoogleAuthProvider();
+
+var provider = new firebase.auth.GoogleAuthProvider();
 const auth = firebase.auth();
+
 
 // Login Button click event listener and associated 'login' function
 // When log-in is clicked, it changes the button's associated data to 'log-out' stuff
@@ -71,7 +73,7 @@ const isLoggedIn = user => {
     // Displays response user.Display name to User on index.html span
     var x = document.getElementById("container-body");
     $("#user").text("User: " + user.displayName)
-    x.style.visibility = "visible";
+   // x.style.visibility = "visible";
     
     
 }
@@ -80,6 +82,6 @@ const isLoggedOut = () => {
     // Shows no user 
     $("#user").empty()
     var x = document.getElementById("container-body");
-    x.style.visibility = "hidden";
+   // x.style.visibility = "hidden";
 }
 

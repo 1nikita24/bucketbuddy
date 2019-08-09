@@ -7,6 +7,8 @@ module.exports = function (sequelize, DataTypes) {
         categoryId: {
             type: DataTypes.INTEGER
         }
+    },
+    {timestamps: false
     });
     return activities;
 };
