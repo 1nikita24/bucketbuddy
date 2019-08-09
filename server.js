@@ -1,15 +1,14 @@
 require("dotenv").config();
 
 var express = require("express");
-//var exphbs = require("express-handlebars");
-
+var sequelize = require("sequelize");
 // Sets up the Express App
 // =============================================================
 var app = express();
 var PORT = process.env.PORT || 8080;
 
 // Requiring our models for syncing
-// var db = require("./models");
+var db = require("./models");
 
 var app = express();
 var PORT = process.env.PORT || 3000;
@@ -26,8 +25,8 @@ require("./routes/api-routes.js")(app);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
-// db.sequelize.sync().then(function() {
+db.sequelize.sync({force: true}).then(function() {
     app.listen(PORT, function() {
         console.log("App listening on PORT http://localhost:" + PORT);
     });
-// });
+});

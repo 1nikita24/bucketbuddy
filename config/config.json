@@ -19,7 +19,7 @@
     "username": "pz6qjw63ldw0zu2a",
     "password": "yn86j2jbiqe7ji4z",
     "database": "qxebasxkj0t6kx7n",
-    "host": "127.0.0.1",
+    "host": "c584md9egjnm02sk.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
     "operatorsAliases": false
   }
