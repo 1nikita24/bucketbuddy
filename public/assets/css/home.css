@@ -236,4 +236,5 @@ header {
   #left-bucket {
       background-image: url(../images/sideBucketnobackground.png);
       background-size: 100%;
+      background-repeat: no-repeat;
   }
