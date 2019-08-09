@@ -1,7 +1,9 @@
 module.exports = function(sequelize, DataTypes){
-    let userList = sequelize.define("userList",{
+    let bucketList = sequelize.define("bucketList",{
         userId: DataTypes.INTEGER,
         activityId: DataTypes.INTEGER
+    },
+    {timestamps: false
     });
-    return userList;
+    return bucketList;
 };
