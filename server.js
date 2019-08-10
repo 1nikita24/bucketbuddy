@@ -22,8 +22,14 @@ require("./routes/api-routes.js")(app);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
-db.sequelize.sync({force: true}).then(function() {
-    app.listen(PORT, function() {
+
+// Uncomment the below line if you need to recreate the sequelize tables 
+// WARNING it will delete both the tables and the data
+//  db.sequelize.sync({force: true}).then(function() {
+
+// The next 1 line will run sequelize for new tables only, it will skip tables that EXIST
+db.sequelize.sync().then(function() {
+        app.listen(PORT, function() {
         console.log("App listening on PORT http://localhost:" + PORT);
     });
 });
