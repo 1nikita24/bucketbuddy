@@ -9,11 +9,12 @@ module.exports = function(app) {
 
   // ============ Database TEST ============
   app.get("/api/testdb", function(req, resExpress) {
-    connection.query("SELECT * FROM notetaker_db.notes", function(err, resSQL) {
+    connection.query("SELECT * FROM categories", function(err, resSQL) {
       if (err) throw err;
     //   console.log(resSQL);
     //   console.log("mySQL DB working! TEST PASSED");
-      resExpress.send("mySQL DB working! TEST PASSED");
+      resExpress.send("mySQL DB working! TEST PASSED" + "<hr>" + JSON.stringify(resSQL));
+      
     });
    
   });
