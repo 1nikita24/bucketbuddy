@@ -1,3 +1,28 @@
+#red {
+    color: red;
+}
+
+#orange {
+    color: orange;
+}
+
+#yellow {
+    color: yellow;
+}
+
+#green {
+    color: #89CC3A;
+}
+
+#blue {
+    color: blue;
+}
+
+#purple {
+    color: purple;
+}
+
+
 body {
     background-image: url(../images/canMix.jpeg);
     background-size: cover;
@@ -36,7 +61,7 @@ header {
   }
   
   #mainNav .navbar-brand {
-    color: #fed136;
+    color: white;
     font-family: 'Kaushan Script', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
     background-color: #212529;  
 }
@@ -223,18 +248,23 @@ header {
     }
   }
   
-  .service-heading {
-    margin: 15px 0;
-    text-transform: none;
-  }
   
   /* LEFT BUCKET */
-.user-main {
-    margin-left: 0;
+#user-main {
+   
+    
 }
 
   #left-bucket {
-      background-image: url(../images/sideBucketnobackground.png);
-      background-size: 100%;
-      background-repeat: no-repeat;
+      /* background-image: url(../images/sideBucketnobackground.png);
+      background-size: 30px;
+      background-repeat: no-repeat; */
+      /* position: fixed */
+      max-width: 130%;
+      position: relative;
+      height: auto;
+  }
+
+  .list-group-item {
+      background-color: none;
   }
