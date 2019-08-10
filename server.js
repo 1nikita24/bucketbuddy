@@ -1,4 +1,4 @@
-require("dotenv").config();
+// require("dotenv").config();
 
 var express = require("express");
 var sequelize = require("sequelize");
@@ -9,9 +9,6 @@ var PORT = process.env.PORT || 8080;
 
 // Requiring our models for syncing
 var db = require("./models");
-
-var app = express();
-var PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(express.urlencoded({ extended: false }));
