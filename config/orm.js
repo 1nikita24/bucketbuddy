@@ -27,15 +27,15 @@ var orm = {
   },
   selectMyList: function(valOfCol, cb) {
     var queryString =
-      "SELECT userprofiles.uid, userprofiles.name, bucketlists.activityId, activities.activity, activities.categoryId, categories.category";
-    queryString += " FROM userprofiles";
+      "SELECT userProfiles.uid, userProfiles.name, bucketLists.activityId, activities.activity, activities.categoryId, categories.category";
+    queryString += " FROM userProfiles";
     queryString +=
-      " INNER JOIN bucketlists ON userprofiles.id = bucketlists.userId";
+      " INNER JOIN bucketLists ON userProfiles.id = bucketLists.userId";
     queryString +=
-      " INNER JOIN activities ON bucketlists.activityId = activities.id";
+      " INNER JOIN activities ON bucketLists.activityId = activities.id";
     queryString +=
       " INNER JOIN categories ON activities.categoryId = categories.id";
-    queryString += " WHERE userprofiles.uid = ?";
+    queryString += " WHERE userProfiles.uid = ?";
 
     connection.query(queryString, [valOfCol], function(err, result) {
       if (err) throw err;
