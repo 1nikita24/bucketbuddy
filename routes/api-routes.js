@@ -40,6 +40,13 @@ module.exports = function(app) {
     bucklistQueries.selectCategories(function(data) {
       console.log(data);
       resExpress.json(data);
+    });
   });
-});
+  // ======== Get users with same activityIds ========
+  app.get("/api/findBuddies", function(req, resExpress) {
+    bucklistQueries.findBuddies(function(data) {
+      console.log(data);
+      resExpress.json(data);
+    });
+  });
 }
