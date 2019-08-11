@@ -43,7 +43,6 @@ var orm = {
       cb(result);
     });
   },
-
   selectCategories: function(whatToSelect, tableInput, cb) {
     var queryString = "SELECT ?? FROM ??";
     console.log(whatToSelect + ":" + tableInput);
@@ -56,6 +55,7 @@ var orm = {
       cb(result);
     });
   },
+  
 }; // end orm var
 
 module.exports = orm;
