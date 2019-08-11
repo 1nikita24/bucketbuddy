@@ -43,6 +43,10 @@ header {
     /* height: 50%; */
 }
 
+li#search-li {
+    margin-top: 8px;
+}
+
 #mainNav {
     background-color: #212529;
     padding: 0%;
