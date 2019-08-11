@@ -17,7 +17,12 @@ var bucklistQueries = {
     orm.selectMyList(findUser, function(res) {
       cb(res);
     });
-  }
+  },
+  selectCategories: function(cb) {
+    orm.selectCategories("*", "category", function(res) {
+      cb(res);
+    });
+  },
 };
 
 module.exports = bucklistQueries;

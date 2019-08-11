@@ -42,7 +42,20 @@ var orm = {
       // console.log(result);
       cb(result);
     });
-  }
+  },
+
+  selectCategories: function(whatToSelect, tableInput, cb) {
+    var queryString = "SELECT ?? FROM ??";
+    console.log(whatToSelect + ":" + tableInput);
+    connection.query(queryString, [whatToSelect, tableInput], function(
+      err,
+      result
+    ) {
+      if (err) throw err;
+      // console.log(result);
+      cb(result);
+    });
+  },
 }; // end orm var
 
 module.exports = orm;
