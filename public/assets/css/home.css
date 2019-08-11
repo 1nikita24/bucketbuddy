@@ -25,7 +25,7 @@
 
 
 body {
-    background-image: url(../images/canMix.jpeg);
+    /* background-image: url(../images/canMix.jpeg); */
     background-size: cover;
     background-repeat: no-repeat;
     overflow-x: hidden;
@@ -335,4 +335,13 @@ header.masthead {
 /* user left profile list */
 #user-profile-list {
     position: fixed;
+    margin-left: 96px;
+    margin-top: 51px;
+}
+
+
+/* row of buddies */
+#buddy-row-paint {
+    height: 300px;
+    overflow-y: auto;
 }
