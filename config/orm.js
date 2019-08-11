@@ -55,19 +55,31 @@ var orm = {
       cb(result);
     });
   },
+  // selectByCategory: function(whatToSelect, tableInput, col, valOfCol, cb) {
+  //   var queryString = "SELECT ?? FROM ?? WHERE ?? = ?";
+  //   console.log(whatToSelect + ":" + tableInput);
+  //   connection.query(queryString,[whatToSelect, tableInput, col, valOfCol], function(
+  //     err,
+  //     result
+  //   ){
+  //     if (err) throw err;
+  //     //console.log(result);
+  //     cb(result);
+  //   });
+  // },
   
   findBuddies: function (valOfActId,valOfUid,cb){
     var queryString = 
       "SELECT DISTINCT activities.activity, categories.category, userProfiles.name"; 
-    queryString += "FROM userProfiles";
+    queryString += " FROM userProfiles";
     queryString += 
-      "INNER JOIN bucketLists ON userProfiles.id = bucketLists.userId";
+      " INNER JOIN bucketLists ON userProfiles.id = bucketLists.userId";
     queryString += 
-      "INNER JOIN activities ON bucketLists.activityId = activities.id";
+      " INNER JOIN activities ON bucketLists.activityId = activities.id";
     queryString += 
-      "INNER JOIN categories ON activities.categoryId = categories.id";
-    queryString += "WHERE bucketLists.activityId = ?";
-    queryString += "AND userProfiles.uid  ?";
+      " INNER JOIN categories ON activities.categoryId = categories.id";
+    queryString += " WHERE bucketLists.activityId = ?";
+    queryString += " AND userProfiles.uid <> ?";
     console.log(valOfActId + ":" + valOfUid);
     connection.query(queryString, [valOfActId,valOfUid], function(
       err,
