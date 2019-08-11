@@ -19,7 +19,8 @@ var bucklistQueries = {
     });
   },
   selectCategories: function(cb) {
-    orm.selectCategories("*", "category", function(res) {
+    // whatToSelect, tableInput
+    orm.selectCategories("*", "categories", function(res) {
       cb(res);
     });
   },

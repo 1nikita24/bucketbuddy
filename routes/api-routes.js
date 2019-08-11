@@ -35,4 +35,11 @@ module.exports = function(app) {
       resExpress.json(data);
     });
   });
-};
+  // ============ Get all categories ===============
+  app.get("/api/categories", function(req, resExpress) {
+    bucklistQueries.selectCategories(function(data) {
+      console.log(data);
+      resExpress.json(data);
+  });
+});
+}
