@@ -24,10 +24,9 @@ var bucklistQueries = {
       cb(res);
     });
   },
-
-  findBuddies: function(findUser,cb) {
+  findBuddies: function(actId, uid, cb) {
     // valOfActId, valOfUid
-    orm.findBuddies(5,"sUT5cnwz3He8kEo3NHksK6osX0J2",findUser, function(res){
+    orm.findBuddies(actId, uid, function(res){
         cb(res);
     });
   },

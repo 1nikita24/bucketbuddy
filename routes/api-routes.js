@@ -43,8 +43,10 @@ module.exports = function(app) {
     });
   });
   // ======== Get users with same activityIds ========
-  app.get("/api/findBuddies", function(req, resExpress) {
-    bucklistQueries.findBuddies(function(data) {
+  app.get("/api/findbuddies/:actId/:uid", function(req, resExpress) {
+    actId = req.params.actId;
+    uid = req.params.uid;
+    bucklistQueries.findBuddies(actId,uid,function(data) {
       console.log(data);
       resExpress.json(data);
     });

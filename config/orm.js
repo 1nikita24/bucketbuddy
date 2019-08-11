@@ -55,19 +55,6 @@ var orm = {
       cb(result);
     });
   },
-  // selectByCategory: function(whatToSelect, tableInput, col, valOfCol, cb) {
-  //   var queryString = "SELECT ?? FROM ?? WHERE ?? = ?";
-  //   console.log(whatToSelect + ":" + tableInput);
-  //   connection.query(queryString,[whatToSelect, tableInput, col, valOfCol], function(
-  //     err,
-  //     result
-  //   ){
-  //     if (err) throw err;
-  //     //console.log(result);
-  //     cb(result);
-  //   });
-  // },
-  
   findBuddies: function (valOfActId,valOfUid,cb){
     var queryString = 
       "SELECT DISTINCT activities.activity, categories.category, userProfiles.name"; 
