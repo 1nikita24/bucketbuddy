@@ -54,6 +54,12 @@ const login = (provider, isLoggedIn) => {
             console.log(user)
             // runs a 'isLoggedIn' function if authentication is successful
             isLoggedIn(user);
+
+            firebase.auth().onAuthStateChanged(user => {
+                if(user) {
+                  window.location = 'home.html'; //After successful login, user will be redirected to home.html
+                }
+              });
             
         }).catch((error) => {
             // If google returns an error, this code logs those errors for reference
@@ -68,20 +74,21 @@ const login = (provider, isLoggedIn) => {
     })
 }
 
+//Handle Account Status
+
 // Functions that handle what happens after a user logs in or out
 const isLoggedIn = user => {
     // Displays response user.Display name to User on index.html span
     var x = document.getElementById("container-body");
     $("#user").text("User: " + user.displayName)
    // x.style.visibility = "visible";
-    
-    
 }
+
 
 const isLoggedOut = () => {
     // Shows no user 
-    $("#user").empty()
-    var x = document.getElementById("container-body");
+  //  $("#user").empty()
+  //  var x = document.getElementById("container-body");
    // x.style.visibility = "hidden";
 }
 
