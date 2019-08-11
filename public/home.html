@@ -20,53 +20,16 @@
   <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
     type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Dancing+Script|Finger+Paint|Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+  
   <!-- JQuery Script-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <!-- Custom styles for this template -->
   <link href="assets/css/home.css" rel="stylesheet">
-
-
 </head>
 
-<body id="page-top">
-  <!DOCTYPE html>
-  <html lang="en">
-
-  <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Bucket Buddy Home Page</title>
-    <!-- normalize css link -->
-    <link href="assets/css/normalize.css" rel="stylesheet" type="text/css">
-    <!-- Bootstrap core CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
-      integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous">
-    </script>
-    <!-- Custom fonts for this template -->
-    <script src="https://kit.fontawesome.com/4a60e6a571.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
-      type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-
-    <!-- Custom styles for this template -->
-    <link href="./assets/css/home.css" rel="stylesheet">
-  </head>
-
   <body id="page-top">
-
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
@@ -94,26 +57,29 @@
     </nav>
 
     <!-- Header with all catagories-->
-    <header class="masthead">
-      <div class="row">
-        <div class="col-md-2 ">
-          <p>Romance</p>
+    <header class=" container masthead">
+      <div class="row" id="masthead-cats">
+        <div class="col-md-2">
+          <p class="cat-text" id="rom-txt">Romance</p>
         </div>
         <div class="col-md-2 ">
-          <p>Entertainment</p>
+          <p class="cat-text" id="ent-txt">Entertainment</p>
+        </div>
+        <div class="col-md-1 ">
+          <p class="cat-text" id="edu-txt">Education</p>
         </div>
         <div class="col-md-2 ">
-          <p>Education</p>
+          <p class="cat-text" id="adv-txt">Adventure</p>
+        </div>
+        <div class="col-md-1 ">
+          <p class="cat-text" id="tra-txt">Travel</p>
         </div>
         <div class="col-md-2 ">
-          <p>Adventure</p>
+          <p class="cat-text" id="uni-txt">Unique</p>
         </div>
         <div class="col-md-2 ">
-          <p>Travel</p>
-        </div>
-        <div class="col-md-2 ">
-          <p>Unique</p>
-        </div>
+            <p class="cat-text" id="all-txt">All</p>
+          </div>
       </div>
     </header>
 
@@ -121,15 +87,16 @@
     <section class="page-section" id="user-main">
       <div class="container">
         <div class="row">
-         
-
-          <div class="col-md-4 text-center float left" >
+          <div class="col-md-6 text-center float left" >
               <img src="./assets/images/sideBucketnobackground.png" class="float-left" id="left-bucket">
                 <span class="avatar">
                  
                 </span>
+                </div>
+                <div id="user-profile-list">
                 <h4 class="service-heading">MY LIST </h4>
-                <p class="" data-type="activity">LIST ITEM</p>
+                <p class="" data-type="activity">LIST ITEM<i class="fas fa-trash-alt ml-2"
+                    id="delete-note-btn"></i></p>
                 <p class="" data-type="activity">LIST ITEM</p>
                 <p class="" data-type="activity">LIST ITEM</p>
                 <p class="" data-type="activity">LIST ITEM</p>
@@ -138,9 +105,9 @@
                 <p class="" data-type="activity">LIST ITEM</p>
                 <p class="" data-type="activity">LIST ITEM</p>
               </div>
-          <div class="col-md-6 text-center">
+          <div class="col-md-6 text-center" id="user-console">
             <h2 class="section-heading text-uppercase text-center">MIDDLE CONSOLE</h2>
-            <h3 class="section-subheading ">RESULTS </h3>
+            <h3 class="section-subheading">RESULTS </h3>
           </div>
         </div>
         <div class="row text-center">
@@ -150,6 +117,8 @@
     </section>
 
 
+
+<script src="assets/js/home.js" type="javascript/text"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
   </body>
