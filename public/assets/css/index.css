@@ -4,6 +4,7 @@
  #red {
      color: red;
  }
+
  #orange {
      color: orange;
  }
@@ -13,7 +14,7 @@
  }
 
  #green {
-     color: green;
+     color: #89CC3A;
  }
 
  #blue {
@@ -21,7 +22,7 @@
  }
 
  #purple {
-    color: purple;
+     color: purple;
  }
 
  body {
@@ -32,29 +33,49 @@
      color: #1D1A13;
      background-size: cover;
  }
+
  .intro-lead-in {
      background-color: #1D1A13;
      color: white;
      padding: 1%;
      /* display: inline; */
-     justify-content: center
+     justify-content: center;
+     margin-bottom: 10%; 
  }
 
  .intro-heading {
-     /* background-color: linear-gradient(to right, white, #96c2dd);; */
+
+     font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+     font-size: 92px;
+     padding: 80px 50px;
+     text-align: center;
+     text-transform: uppercase;
+     text-rendering: optimizeLegibility;
+     color: #131313;
+     letter-spacing: .15em;
+     text-shadow:
+         1px -1px 0 #767676,
+         -1px 2px 1px #737272,
+         -2px 4px 1px #767474,
+         -3px 6px 1px #787777,
+         -4px 8px 1px #7b7a7a,
+         -5px 10px 1px #7f7d7d,
+         -6px 12px 1px #828181,
+         -7px 14px 1px #868585,
+         -8px 16px 1px #8b8a89,
+         -9px 18px 1px #8f8e8d,
+         -10px 20px 1px #949392;
      padding: 1%;
-     /* display: inline; */
-    
-     justify-content: center
+     margin-top: 2%;
+     justify-content: center;
  }
 
  .btn-primary {
      background-color: #1D1A13;
      border-color: #1D1A13;
      padding: 2%;
-     /* display: inline; */
-    
-     justify-content: center
+     justify-content: center;
+     margin-top: 15%;
  }
 
  p {
@@ -62,7 +83,7 @@
  }
 
  .text-primary {
-     color: #1D1A13 ;
+     color: #1D1A13;
  }
 
  .btn-primary:active,
@@ -111,8 +132,8 @@
 
  @media (min-width: 768px) {
      header.masthead .intro-text {
-         padding-top: 300px;
-         padding-bottom: 200px;
+        padding-top: 11%;
+        padding-bottom: 200px;
      }
 
      header.masthead .intro-text .intro-lead-in {

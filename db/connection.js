@@ -5,6 +5,7 @@ var connection;
 if (process.env.JAWSDB_URL) {
     connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
+<<<<<<< HEAD
     connection = mysql.createConnection({
         host: "localhost",
         port: 3306,
@@ -12,6 +13,15 @@ if (process.env.JAWSDB_URL) {
         password: "May04month",
         database: "bucketbuddy_db"
     });
+=======
+  connection = mysql.createConnection({
+    host: "localhost",
+    port: 3306,
+    user: "root",
+    password: "R$tgers300my",
+    database: "bucketbuddy_db"
+  });
+>>>>>>> e5e54324398c46d5dcf8a160bb02a21ae2b8a1f6
 }
 
 connection.connect(function(err) {
