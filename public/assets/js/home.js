@@ -5,7 +5,53 @@ $(function () {
     let provider = new firebase.auth.GoogleAuthProvider();
     let auth = firebase.auth();
     let userArr = [];
-    console.log(userArr);
+
+
+    //-----------------TARGETED HTML ELEMENTS USING JQuery-------------------//
+    const $bucketProContainer = $('#user-profile-list');
+    const $userConsole = $('#"user-console"');
+
+    //-----------------FUNCTIONS CALLED IN AJAX CALLS ----------------------//
+    
+    //function to diplay list items
+    let myBucketList = function (activities) {
+        $bucketProContainer.empty();
+        for (let i = 0; i < activities.length; i++) {
+            let activity = activities[i];
+            $bucketProContainer.append(`
+            <p class="" data-type="activity">${activity.activity}
+            <i class="fas fa-trash-alt ml-2" id="${activity.id}"></i></p>`)
+        }
+    }
+
+    let myResultList = function(results){
+        $userConsole.empty();
+        for (let i = 0; i < activities.length; i++) {
+            let activity = activities[i];
+            $bucketProContainer.append(`
+            <p class="" data-type="activity">${activity.activity}
+            <i class="fas fa-trash-alt ml-2" id="${activity.id}"></i></p>`)
+        }
+    }
+
+
+
+
+
+    //----------------AJAX API CALLS----------------//
+
+    //AJAX Call to get my list JSON object from api
+    let getJSONactivities = function () {
+        console.log(userArr[0])
+        let queryString = "/api/mylist/" + userArr[0];
+        $.ajax({
+            url: queryString,
+            method: "GET"
+        }).then(function (data) {
+            console.log(data);
+            myBucketList(data);
+        });
+    };
 
     function getCurrentUser(auth) {
         return new Promise((resolve, reject) => {
@@ -22,34 +68,7 @@ $(function () {
         userArr.push(data.photoURL);
         console.log(userArr[0])
         // Functions used to display content
-        const $bucketProContainer = $('#user-profile-list');
 
-
-        // Function to display Bucket List
-
-        let myBucketList = function (activities) {
-            $bucketProContainer.empty();
-
-
-            for (let i = 0; i < activities.length; i++) {
-                let activity = activities[i];
-                $bucketProContainer.append(`
-        <p class="" data-type="activity">${activity.activity}<i class="fas fa-trash-alt ml-2" id="${activity.id}"></i></p>`)
-            }
-        }
-
-        let getJSONactivities = function () {
-            console.log(userArr[0])
-            let queryString = "/api/mylist/" + userArr[0];
-            $.ajax({
-                url: queryString,
-                method: "GET"
-            }).then(function (data) {
-                console.log(data);
-                myBucketList(data);
-            });
-        };
-        //call function to get and display notes
 
 
         getJSONactivities();
