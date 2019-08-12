@@ -81,8 +81,8 @@ const login = (provider, isLoggedIn) => {
 // Functions that handle what happens after a user logs in or out
 const isLoggedIn = user => {
     // Displays response user.Display name to User on index.html span
-    var x = document.getElementById("container-body");
-    $("#user").text("User: " + user.displayName)
+  //  var x = document.getElementById("container-body");
+  //  $("#user").text("User: " + user.displayName)
    // x.style.visibility = "visible";
 }
 
@@ -94,5 +94,5 @@ const isLoggedOut = () => {
    // x.style.visibility = "hidden";
 }
 
-exports.modules = user;
+
 
