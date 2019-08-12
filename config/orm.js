@@ -13,6 +13,18 @@ var orm = {
       cb(result);
     });
   },
+  selectAllActivities: function(whatToSelect, tableInput, cb) {
+    var queryString = "SELECT ?? FROM ??";
+    console.log(whatToSelect + ":" + tableInput);
+    connection.query(queryString, [whatToSelect, tableInput], function(
+      err,
+      result
+    ) {
+      if (err) throw err;
+      // console.log(result);
+      cb(result);
+    });
+  },
   selectUserPofile: function(tableInput, colToSearch, valOfCol, cb) {
     var queryString = "SELECT * FROM ?? WHERE ?? = ?";
 
@@ -55,29 +67,40 @@ var orm = {
       cb(result);
     });
   },
-  findBuddies: function (valOfActId,valOfUid,cb){
-    var queryString = 
-      "SELECT DISTINCT activities.activity, categories.category, userProfiles.name"; 
-    queryString += " FROM userProfiles";
-    queryString += 
-      " INNER JOIN bucketLists ON userProfiles.id = bucketLists.userId";
-    queryString += 
-      " INNER JOIN activities ON bucketLists.activityId = activities.id";
-    queryString += 
-      " INNER JOIN categories ON activities.categoryId = categories.id";
-    queryString += " WHERE bucketLists.activityId = ?";
-    queryString += " AND userProfiles.uid <> ?";
-    console.log(valOfActId + ":" + valOfUid);
-    connection.query(queryString, [valOfActId,valOfUid], function(
+  selectActivitiesByCategory: function(tableInput, colToSearch, valOfCol, cb) {
+    var queryString = "SELECT * FROM ?? WHERE ?? = ?";
+
+    connection.query(queryString, [tableInput, colToSearch, valOfCol], function(
       err,
       result
-    ){
+    ) {
       if (err) throw err;
       // console.log(result);
       cb(result);
     });
   },
-  
+  findBuddies: function(valOfActId, valOfUid, cb) {
+    var queryString =
+      "SELECT DISTINCT activities.activity, categories.category, userProfiles.name";
+    queryString += " FROM userProfiles";
+    queryString +=
+      " INNER JOIN bucketLists ON userProfiles.id = bucketLists.userId";
+    queryString +=
+      " INNER JOIN activities ON bucketLists.activityId = activities.id";
+    queryString +=
+      " INNER JOIN categories ON activities.categoryId = categories.id";
+    queryString += " WHERE bucketLists.activityId = ?";
+    queryString += " AND userProfiles.uid <> ?";
+    console.log(valOfActId + ":" + valOfUid);
+    connection.query(queryString, [valOfActId, valOfUid], function(
+      err,
+      result
+    ) {
+      if (err) throw err;
+      // console.log(result);
+      cb(result);
+    });
+  }
 }; // end orm var
 
 module.exports = orm;
