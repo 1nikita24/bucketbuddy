@@ -50,6 +50,11 @@ var bucklistQueries = {
     orm.insertMyList("bucketlists", cols, vals, function(res) {
       cb(res);
     });
+  },
+  deleteMyList: function(condition, cb) {
+    orm.deleteMyList("bucketlists", condition, function(res) {
+      cb(res);
+    });
   }
 };
 
