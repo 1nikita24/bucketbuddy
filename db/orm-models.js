@@ -45,6 +45,11 @@ var bucklistQueries = {
     orm.findBuddies(actId, uid, function(res) {
       cb(res);
     });
+  },
+  insertActivity: function(cols, vals, cb) {
+    orm.insertActivity("bucketlists", cols, vals, function(res) {
+      cb(res);
+    });
   }
 };
 

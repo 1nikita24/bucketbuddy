@@ -67,4 +67,15 @@ module.exports = function(app) {
       resExpress.json(data);
     });
   });
+
+  app.get("/api/insertactivity/:userid/:actid", function(req, resExpress) {
+    bucklistQueries.insertActivity(
+      ["userid", "activityId"],
+      [req.params.userid, req.params.actid],
+      function(result) {
+        // Send back the ID of the new bucketlist item
+        resExpress.json({ id: result.insertId });
+      }
+    );
+  });
 };
