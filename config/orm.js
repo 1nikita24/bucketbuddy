@@ -111,7 +111,7 @@ var orm = {
       cb(result);
     });
   },
-  insertActivity: function(table, cols, vals, cb) {
+  insertMyList: function(table, cols, vals, cb) {
     var queryString = "INSERT INTO " + table;
 
     queryString += " (";
@@ -124,6 +124,19 @@ var orm = {
     console.log(queryString);
 
     connection.query(queryString, vals, function(err, result) {
+      if (err) {
+        throw err;
+      }
+
+      cb(result);
+    });
+  },
+  deleteMyList: function(table, condition, cb) {
+    var queryString = "DELETE FROM " + table;
+    queryString += " WHERE ";
+    queryString += condition;
+
+    connection.query(queryString, function(err, result) {
       if (err) {
         throw err;
       }

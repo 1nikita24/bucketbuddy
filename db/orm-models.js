@@ -46,8 +46,13 @@ var bucklistQueries = {
       cb(res);
     });
   },
-  insertActivity: function(cols, vals, cb) {
-    orm.insertActivity("bucketlists", cols, vals, function(res) {
+  insertMyList: function(cols, vals, cb) {
+    orm.insertMyList("bucketlists", cols, vals, function(res) {
+      cb(res);
+    });
+  },
+  deleteMyList: function(condition, cb) {
+    orm.deleteMyList("bucketlists", condition, function(res) {
       cb(res);
     });
   }
