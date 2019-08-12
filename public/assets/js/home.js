@@ -19,6 +19,7 @@ $(function () {
       getCurrentUser(auth).then(function(data){
         
         console.log(data.displayName);
+        console.log(data.photoURL);
 
 
 
