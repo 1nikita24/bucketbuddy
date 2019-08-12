@@ -69,7 +69,7 @@ const login = (provider, isLoggedIn) => {
             isLoggedIn(user);
 
             firebase.auth().onAuthStateChanged(user => {
-
+                console.log(user);
                 if(user) {
                   window.location = 'home.html'; //After successful login, user will be redirected to home.html
                 }
