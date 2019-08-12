@@ -51,7 +51,9 @@ const login = (provider, isLoggedIn) => {
             // (ex: email, name, gmail avatar img)
             // google handles all password security/encryption 
             const user = result.user;
-            console.log(user)
+           // console.log(user)
+            console.log(user.displayName)
+            console.log(user.photoURL)
             // runs a 'isLoggedIn' function if authentication is successful
             isLoggedIn(user);
 
@@ -91,4 +93,6 @@ const isLoggedOut = () => {
   //  var x = document.getElementById("container-body");
    // x.style.visibility = "hidden";
 }
+
+exports.modules = user;
 

@@ -35,4 +35,20 @@ module.exports = function(app) {
       resExpress.json(data);
     });
   });
-};
+  // ============ Get all categories ===============
+  app.get("/api/categories", function(req, resExpress) {
+    bucklistQueries.selectCategories(function(data) {
+      console.log(data);
+      resExpress.json(data);
+    });
+  });
+  // ======== Get users with same activityIds ========
+  app.get("/api/findbuddies/:actId/:uid", function(req, resExpress) {
+    actId = req.params.actId;
+    uid = req.params.uid;
+    bucklistQueries.findBuddies(actId,uid,function(data) {
+      console.log(data);
+      resExpress.json(data);
+    });
+  });
+}

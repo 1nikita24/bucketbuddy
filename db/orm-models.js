@@ -17,7 +17,19 @@ var bucklistQueries = {
     orm.selectMyList(findUser, function(res) {
       cb(res);
     });
-  }
+  },
+  selectCategories: function(cb) {
+    // whatToSelect, tableInput
+    orm.selectCategories("*", "categories", function(res) {
+      cb(res);
+    });
+  },
+  findBuddies: function(actId, uid, cb) {
+    // valOfActId, valOfUid
+    orm.findBuddies(actId, uid, function(res){
+        cb(res);
+    });
+  },
 };
 
 module.exports = bucklistQueries;

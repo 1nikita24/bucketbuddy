@@ -20,138 +20,148 @@
   <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
     type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Dancing+Script|Finger+Paint|Roboto+Slab:400,100,300,700'
+    rel='stylesheet' type='text/css'>
+
   <!-- JQuery Script-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <!-- Custom styles for this template -->
   <link href="assets/css/home.css" rel="stylesheet">
-
-
 </head>
 
 <body id="page-top">
-  <!DOCTYPE html>
-  <html lang="en">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="index.html"><span id="red">B</span>U<span
+          id="orange">C</span>K<span id="yellow">E</span>T <span id="green">B</span>U<span id="blue">D</span>D<span
+          id="purple">Y</span></a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav text-uppercase ml-auto">
 
-  <head>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#profile">Profile</a>
+          </li>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="index.html">logout</a>
+          </li>
+          <li class="nav-item" id="search-li">
+            <form class="form-inline">
+              <input class="form-control mr-sm-2" id="searchInput" type="search" placeholder="Search Activities"
+                aria-label="Search">
+              <button class="btn btn-outline-light my-2 my-sm-0" id="search-note-btn" type="submit">Search</button>
 
-    <title>Bucket Buddy Home Page</title>
-    <!-- normalize css link -->
-    <link href="assets/css/normalize.css" rel="stylesheet" type="text/css">
-    <!-- Bootstrap core CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
-      integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous">
-    </script>
-    <!-- Custom fonts for this template -->
-    <script src="https://kit.fontawesome.com/4a60e6a571.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
-      type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-
-    <!-- Custom styles for this template -->
-    <link href="./assets/css/home.css" rel="stylesheet">
-  </head>
-
-  <body id="page-top">
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="index.html"><span id="red">B</span>U<span id="orange">C</span>K<span id="yellow">E</span>T <span id="green">B</span>U<span id="blue">D</span>D<span id="purple">Y</span></a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-          data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-          aria-label="Toggle navigation">
-          Menu
-          <i class="fas fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav text-uppercase ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#profile">Profile</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#search">Search Activities</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#login">Login/logout</a>
-            </li>
-          </ul>
-        </div>
+          </li>
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <!-- Header with all catagories-->
-    <header class="masthead">
+  <!-- Header with all catagories-->
+  <header class=" container masthead">
+    <div class="row" id="masthead-cats">
+      <div class="col-md-2">
+        <p class="cat-text" id="rom-txt">Romance</p>
+      </div>
+      <div class="col-md-2 ">
+        <p class="cat-text" id="ent-txt">Entertainment</p>
+      </div>
+      <div class="col-md-1 ">
+        <p class="cat-text" id="edu-txt">Education</p>
+      </div>
+      <div class="col-md-2 ">
+        <p class="cat-text" id="adv-txt">Adventure</p>
+      </div>
+      <div class="col-md-1 ">
+        <p class="cat-text" id="tra-txt">Travel</p>
+      </div>
+      <div class="col-md-2 ">
+        <p class="cat-text" id="uni-txt">Unique</p>
+      </div>
+      <div class="col-md-2 ">
+        <p class="cat-text" id="all-txt">All</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- User Interface -->
+  <section class="page-section" id="user-main">
+    <div class="container">
       <div class="row">
-        <div class="col-md-2 ">
-          <p>Romance</p>
+        <div class="col-md-6 text-center float left">
+          <img src="./assets/images/sideBucketnobackground.png" class="float-left" id="left-bucket">
+          <span class="avatar">
+
+          </span>
         </div>
-        <div class="col-md-2 ">
-          <p>Entertainment</p>
+        <div id="user-profile-list">
+          <h4 class="service-heading">MY LIST </h4>
+          <p class="" data-type="activity">LIST ITEM<i class="fas fa-trash-alt ml-2" id="delete-note-btn"></i></p>
+          <p class="" data-type="activity">LIST ITEM</p>
+          <p class="" data-type="activity">LIST ITEM</p>
+          <p class="" data-type="activity">LIST ITEM</p>
+          <p class="" data-type="activity">LIST ITEM</p>
+          <p class="" data-type="activity">LIST ITEM</p>
+          <p class="" data-type="activity">LIST ITEM</p>
+          <p class="" data-type="activity">LIST ITEM</p>
         </div>
-        <div class="col-md-2 ">
-          <p>Education</p>
-        </div>
-        <div class="col-md-2 ">
-          <p>Adventure</p>
-        </div>
-        <div class="col-md-2 ">
-          <p>Travel</p>
-        </div>
-        <div class="col-md-2 ">
-          <p>Unique</p>
+        <div class="col-md-6 text-center" id="user-console">
+          <h2 class="section-heading text-uppercase text-center"><span id="red">C</span>O<span
+            id="orange">N</span>S<span id="yellow">O</span>L<span id="green">E</span> <span id="blue">M</span>I<span
+            id="purple">D</span></h2>
+          <h3 class="section-subheading">RESULTS </h3>
         </div>
       </div>
-    </header>
+      <!-- ROW OF BUDDIES  -->
+      <img src="./assets/images/headerpaint.jpeg" id="buddy-row-paint">
+  </section>
+ 
+      <div class="col-lg-12" id="avatar-icon-row">
+        
+        <p class="circle-text">Circle Avatar</p>
+        <a href=#add-Buddy class="circle">
+          <img height="60" width="60"
+            src="https://lh3.googleusercontent.com/-yKfrxPXbBsA/AAAAAAAAAAI/AAAAAAAAACk/ZWBYVHGLRe4/photo.jpg"
+            alt="Buddy Avatar" class="float-left">
+        </a>
+        <p class="circle-text">Circle Avatar</p>
+        <a href="#add-buddy" class="circle">
+          <img height="60" width="60"
+            src="https://lh3.googleusercontent.com/-yKfrxPXbBsA/AAAAAAAAAAI/AAAAAAAAACk/ZWBYVHGLRe4/photo.jpg"
+            alt="Buddy Avatar" class="float-left">
+        </a>
+        <p class="circle-text">Circle Avatar</p>
+        <a href="#add-buddy" class="circle">
+          <img height="60" width="60"
+            src="https://lh3.googleusercontent.com/-yKfrxPXbBsA/AAAAAAAAAAI/AAAAAAAAACk/ZWBYVHGLRe4/photo.jpg"
+            alt="Buddy Avatar" class="float-left">
+        </a>
+        <p class="circle-text">Circle Avatar</p>
+        <a href="#add-buddy" class="circle">
+          <img height="60" width="60"
+            src="https://lh3.googleusercontent.com/-yKfrxPXbBsA/AAAAAAAAAAI/AAAAAAAAACk/ZWBYVHGLRe4/photo.jpg"
+            alt="Buddy Avatar">
+        </a>
+        <p class="circle-text">Circle Avatar</p>
+        <a href="#add-buddy" class="circle">
+          <img height="60" width="60"
+            src="https://lh3.googleusercontent.com/-yKfrxPXbBsA/AAAAAAAAAAI/AAAAAAAAACk/ZWBYVHGLRe4/photo.jpg"
+            alt="Buddy Avatar" class="float-left">
+        </a>
+      </div>
+   
 
-    <!-- User Interface -->
-    <section class="page-section" id="user-main">
-      <div class="container">
-        <div class="row">
-         
+  <script src="assets/js/home.js" type="javascript/text"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
 
-          <div class="col-md-4 text-center float left" >
-              <img src="./assets/images/sideBucketnobackground.png" class="float-left" id="left-bucket">
-                <span class="avatar">
-                 
-                </span>
-                <h4 class="service-heading">MY LIST </h4>
-                <p id="bucketList" class="" data-type="activity">LIST ITEM</p>
-                <p class="" data-type="activity">LIST ITEM</p>
-                <p class="" data-type="activity">LIST ITEM</p>
-                <p class="" data-type="activity">LIST ITEM</p>
-                <p class="" data-type="activity">LIST ITEM</p>
-                <p class="" data-type="activity">LIST ITEM</p>
-                <p class="" data-type="activity">LIST ITEM</p>
-                <p class="" data-type="activity">LIST ITEM</p>
-              </div>
-          <div class="col-md-6 text-center">
-            <h2 class="section-heading text-uppercase text-center">MIDDLE CONSOLE</h2>
-            <h3 class="section-subheading ">RESULTS </h3>
-          </div>
-        </div>
-        <div class="row text-center">
-
-        </div>
-
-    </section>
-
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  </body>
-
-  </html>
+</html>
