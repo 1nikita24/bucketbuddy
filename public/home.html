@@ -23,14 +23,14 @@
   <link href='https://fonts.googleapis.com/css?family=Dancing+Script|Finger+Paint|Roboto+Slab:400,100,300,700'
     rel='stylesheet' type='text/css'>
 
-
-    
   <!-- JQuery Script-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/core.js"></script>
   <!-- Custom styles for this template -->
   <link href="assets/css/home.css" rel="stylesheet">
-  
+
 
 </head>
 
@@ -107,7 +107,7 @@
           </span>
         </div>
         <div id="user-profile-list">
-          <h4 class="service-heading">MY LIST </h4>
+          <h4 class="service-heading" >MY LIST </h4>
           <p class="" data-type="activity">LIST ITEM<i class="fas fa-trash-alt ml-2" id="delete-note-btn"></i></p>
           <p class="" data-type="activity">LIST ITEM</p>
           <p class="" data-type="activity">LIST ITEM</p>
@@ -119,59 +119,58 @@
         </div>
         <div class="col-md-6 text-center" id="user-console">
           <h2 class="section-heading text-uppercase text-center"><span id="red">C</span>O<span
-            id="orange">N</span>S<span id="yellow">O</span>L<span id="green">E</span> <span id="blue">M</span>I<span
-            id="purple">D</span></h2>
+              id="orange">N</span>S<span id="yellow">O</span>L<span id="green">E</span> <span id="blue">M</span>I<span
+              id="purple">D</span></h2>
           <h3 class="section-subheading">RESULTS </h3>
         </div>
       </div>
       <!-- ROW OF BUDDIES  -->
       <img src="./assets/images/headerpaint.jpeg" id="buddy-row-paint">
   </section>
- 
-      <div class="col-lg-12" id="avatar-icon-row">
-        
-        <p class="circle-text">Circle Avatar</p>
-        <a href=#add-Buddy class="circle">
-          <img height="60" width="60"
-            src="https://lh3.googleusercontent.com/-yKfrxPXbBsA/AAAAAAAAAAI/AAAAAAAAACk/ZWBYVHGLRe4/photo.jpg"
-            alt="Buddy Avatar" class="float-left">
-        </a>
-        <p class="circle-text">Circle Avatar</p>
-        <a href="#add-buddy" class="circle">
-          <img height="60" width="60"
-            src="https://lh3.googleusercontent.com/-yKfrxPXbBsA/AAAAAAAAAAI/AAAAAAAAACk/ZWBYVHGLRe4/photo.jpg"
-            alt="Buddy Avatar" class="float-left">
-        </a>
-        <p class="circle-text">Circle Avatar</p>
-        <a href="#add-buddy" class="circle">
-          <img height="60" width="60"
-            src="https://lh3.googleusercontent.com/-yKfrxPXbBsA/AAAAAAAAAAI/AAAAAAAAACk/ZWBYVHGLRe4/photo.jpg"
-            alt="Buddy Avatar" class="float-left">
-        </a>
-        <p class="circle-text">Circle Avatar</p>
-        <a href="#add-buddy" class="circle">
-          <img height="60" width="60"
-            src="https://lh3.googleusercontent.com/-yKfrxPXbBsA/AAAAAAAAAAI/AAAAAAAAACk/ZWBYVHGLRe4/photo.jpg"
-            alt="Buddy Avatar">
-        </a>
-        <p class="circle-text">Circle Avatar</p>
-        <a href="#add-buddy" class="circle">
-          <img height="60" width="60"
-            src="https://lh3.googleusercontent.com/-yKfrxPXbBsA/AAAAAAAAAAI/AAAAAAAAACk/ZWBYVHGLRe4/photo.jpg"
-            alt="Buddy Avatar" class="float-left">
-        </a>
-      </div>
-      <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-app.js"></script>
 
-      <!-- Add Firebase products that you want to use -->
-      <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-auth.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-firestore.js"></script>
-      
-      <script src="./assets/js/firebase.js"></script>
-      <script src="assets/js/home.js"></script>
-      
+  <div class="col-lg-12" id="avatar-icon-row">
 
-      
+    <p class="circle-text">Circle Avatar</p>
+    <a href=#add-Buddy class="circle">
+      <img height="60" width="60"
+        src="https://lh3.googleusercontent.com/-yKfrxPXbBsA/AAAAAAAAAAI/AAAAAAAAACk/ZWBYVHGLRe4/photo.jpg"
+        alt="Buddy Avatar" class="float-left">
+    </a>
+    <p class="circle-text">Circle Avatar</p>
+    <a href="#add-buddy" class="circle">
+      <img height="60" width="60"
+        src="https://lh3.googleusercontent.com/-yKfrxPXbBsA/AAAAAAAAAAI/AAAAAAAAACk/ZWBYVHGLRe4/photo.jpg"
+        alt="Buddy Avatar" class="float-left">
+    </a>
+    <p class="circle-text">Circle Avatar</p>
+    <a href="#add-buddy" class="circle">
+      <img height="60" width="60"
+        src="https://lh3.googleusercontent.com/-yKfrxPXbBsA/AAAAAAAAAAI/AAAAAAAAACk/ZWBYVHGLRe4/photo.jpg"
+        alt="Buddy Avatar" class="float-left">
+    </a>
+    <p class="circle-text">Circle Avatar</p>
+    <a href="#add-buddy" class="circle">
+      <img height="60" width="60"
+        src="https://lh3.googleusercontent.com/-yKfrxPXbBsA/AAAAAAAAAAI/AAAAAAAAACk/ZWBYVHGLRe4/photo.jpg"
+        alt="Buddy Avatar">
+    </a>
+    <p class="circle-text">Circle Avatar</p>
+    <a href="#add-buddy" class="circle">
+      <img height="60" width="60"
+        src="https://lh3.googleusercontent.com/-yKfrxPXbBsA/AAAAAAAAAAI/AAAAAAAAACk/ZWBYVHGLRe4/photo.jpg"
+        alt="Buddy Avatar" class="float-left">
+    </a>
+  </div>
+
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-firestore.js"></script>
+
+  <script src="./assets/js/firebase.js"></script>
+  <script src="assets/js/home.js"></script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
