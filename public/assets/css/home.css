@@ -90,6 +90,10 @@ li#search-li {
     color: #fed136;
 }
 
+.form-inline {
+    margin-bottom: 2%;
+}
+
 p {
     /* line-height: 1.75; */
     /* background-color: #212529; */

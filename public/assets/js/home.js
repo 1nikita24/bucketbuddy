@@ -26,8 +26,8 @@ $(function () {
 
     let myResultList = function(results){
         $userConsole.empty();
-        for (let i = 0; i < activities.length; i++) {
-            let activity = activities[i];
+        for (let i = 0; i < results.length; i++) {
+            let listItem = results[i];
             $bucketProContainer.append(`
             <p class="" data-type="activity">${activity.activity}
             <i class="fas fa-trash-alt ml-2" id="${activity.id}"></i></p>`)
