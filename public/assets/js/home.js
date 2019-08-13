@@ -200,12 +200,11 @@ $(function () {
 
 
     $(document).on("click", ".fa-plus", function () {
-        
         let addCatId = $(this).attr("id");
         let queryString = "/api/insertmylist/" + userDBid + "/" +addCatId;
         $.ajax({
             url: queryString,
-            method: "get"
+            method: "post"
         }).then(function (data) {
             handleMyListSearch(userArr[0].uid);
         });
