@@ -21,7 +21,7 @@ $(function () {
         for (let i = 0; i < activities.length; i++) {
             let activity = activities[i];
             $bucketProContainer.append(`
-            <p class="" data-type="activity">${activity.activity}
+            <p class="bltxt" data-type="activity">${activity.activity}
             <i class="fas fa-trash-alt ml-2" id="${activity.bucketListsId}"></i></p>`)
         }
     }

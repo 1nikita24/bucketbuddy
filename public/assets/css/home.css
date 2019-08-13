@@ -25,10 +25,11 @@
 
 
 body {
-    /* background-image: url(../images/canMix.jpeg); */
-    background-size: cover;
+    background-image: url(../images/backgroundImage.jpeg);
+    background-size: 100%;
+
     background-repeat: no-repeat;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
 }
@@ -101,6 +102,11 @@ p {
     font-weight: 800;
     font-size: 180%;
     font-family: 'dancing script';
+}
+
+.bltxt {
+    font-family: 'Lato', sans-serif;
+    font-size: 124%;
 }
 
 a {
@@ -230,7 +236,7 @@ header.masthead {
 
 .catagory-text {
     position: absolute;
-    font-size: 24px;
+
 }
 
 .col-md-2 {
@@ -239,8 +245,8 @@ header.masthead {
 
 #rom-txt {
     margin-left: 0px;
-    margin-right: 0px;
-    font-size: 24px;
+    margin-right: 8px;
+    font-size: 175%;
     padding-left: 0px;
     padding-right: 0px;
 }
@@ -250,31 +256,31 @@ header.masthead {
     margin-right: 33px;
     padding-left: 0px;
     padding-right: 0px;
-    font-size: 20px;
+    font-size: 175%;
 }
 
 #edu-txt {
-    margin-left: -29px;
+    margin-left: -38px;
     margin-right: 0px;
     padding-left: 0px;
     padding-right: 0px;
-    font-size: 24px;
+    font-size: 175%;
 }
 
 #adv-txt {
-    margin-left: 0px;
+    margin-left: 5px;
     margin-right: 0px;
     padding-left: 0px;
     padding-right: 0px;
-    font-size: 24px;
+    font-size: 175%;
 }
 
 #tra-txt {
-    margin-left: 14px;
+    margin-left: 6px;
     margin-right: 0px;
     padding-left: 0px;
     padding-right: 0px;
-    font-size: 24px;
+    font-size: 175%;
 }
 
 #uni-txt {
@@ -282,15 +288,15 @@ header.masthead {
     margin-right: 0px;
     padding-left: 0px;
     padding-right: 0px;
-    font-size: 24px;
+    font-size: 175%;
 }
 
 #all-txt {
-    margin-left: 15px;
+    margin-left: 10px;
     margin-right: 0px;
     padding-left: 0px;
     padding-right: 0px;
-    font-size: 24px;
+    font-size: 175%;
 }
 
 .cat-text {
@@ -337,8 +343,12 @@ header.masthead {
 /* user left profile list */
 #user-profile-list {
     position: absolute;
-    margin-left: 96px;
-    margin-top: 117px;
+    margin-left: 109px;
+    margin-top: 93px;
+    padding: 0%;
+    overflow: scroll;
+    width: 22%;
+    height: 54%;
 }
 
 /* User Console */
@@ -347,6 +357,12 @@ header.masthead {
     background-size: 100%;
     background-repeat: no-repeat;
     border: solid;
+    margin-top: 2%;
+    background-color: white;
+}
+
+#console-header {
+    margin-top: 4%;
 }
 
 h2 {
@@ -358,39 +374,94 @@ h2 {
     height: 241px;
     overflow-y: auto;
     position: relative;
+    margin-left: -5%;
 }
 
 /* Avatars bottom row */
 .circle {
-	line-height: 0;		/* remove line-height */ 
-	display: inline-block;	/* circle wraps image */
-	margin: 5px;
-  border: 4px solid rgba(200,200,200,0.4);
-	border-radius: 50%;	/* relative value */
-	/*box-shadow: 0px 0px 5px rgba(0,0,0,0.4);*/
-	transition: linear 0.25s;
-  height: 67px;
-  width: 67px;
-  /* position: absolute; */
+    line-height: 0;
+    /* remove line-height */
+    display: inline-block;
+    /* circle wraps image */
+    margin: 5px;
+    border: 4px solid rgba(200, 200, 200, 0.4);
+    border-radius: 50%;
+    /* relative value */
+    /*box-shadow: 0px 0px 5px rgba(0,0,0,0.4);*/
+    transition: linear 0.25s;
+    height: 67px;
+    width: 67px;
+    /* position: absolute; */
 }
+
 .circle img {
-	border-radius: 50%;	/* relative value for
+    border-radius: 50%;
+    /* relative value for
 				   adjustable image size */
 }
+
 .circle:hover {
-	transition: ease-out 0.2s;
-  border: 4px solid rgba(0,0,0,0.2);
-  -webkit-transition: ease-out 0.2s;
+    transition: ease-out 0.2s;
+    border: 4px solid rgba(0, 0, 0, 0.2);
+    -webkit-transition: ease-out 0.2s;
 }
-a.circle, p.circle-text {
-  color: transparent;
-  display: inline;
+
+a.circle,
+p.circle-text {
+    color: transparent;
+    display: inline;
     float: left;
-} 
+}
 
 #avatar-icon-row {
     display: inline;
     float: left;
     white-space: nowrap;
-    
+
+}
+
+/* scroll bar */
+.scrollbar::-webkit-scrollbar {
+    background-color: #fff;
+    width: 16px
+}
+
+/* background of the scrollbar except button or resizer */
+.scrollbar::-webkit-scrollbar-track {
+    background-color: #fff
+}
+
+.scrollbar::-webkit-scrollbar-track:hover {
+    background-color: #f4f4f4
+}
+
+/* scrollbar itself */
+.scrollbar::-webkit-scrollbar-thumb {
+    background-color: #babac0;
+    border-radius: 16px;
+    border: 5px solid #fff
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #a0a0a5;
+    border: 4px solid #f4f4f4
+}
+
+/* set button(top and bottom of the scrollbar) */
+.scrollbar::-webkit-scrollbar-button {
+    display: none
+}
+
+/* div box */
+
+.scrollbar {
+    height: 75vh;
+    width: 25vw;
+    min-width: 150px;
+    background: #fff;
+    overflow-y: scroll
+}
+
+.overflow {
+    min-height: 100vh
 }
