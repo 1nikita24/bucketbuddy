@@ -55,6 +55,11 @@ var bucklistQueries = {
     orm.deleteMyList("bucketLists", condition, function(res) {
       cb(res);
     });
+  },
+  countActivities: function(cb) {
+    orm.countActivities(function(res) {
+      cb(res);
+    });
   }
 };
 
