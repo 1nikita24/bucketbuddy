@@ -47,12 +47,12 @@ var bucklistQueries = {
     });
   },
   insertMyList: function(cols, vals, cb) {
-    orm.insertMyList("bucketlists", cols, vals, function(res) {
+    orm.insertMyList("bucketLists", cols, vals, function(res) {
       cb(res);
     });
   },
   deleteMyList: function(condition, cb) {
-    orm.deleteMyList("bucketlists", condition, function(res) {
+    orm.deleteMyList("bucketLists", condition, function(res) {
       cb(res);
     });
   }
