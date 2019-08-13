@@ -91,4 +91,11 @@ module.exports = function(app) {
       }
     });
   });
+  // ============ Get the count of all activites for ChartKick ===============
+  app.get("/api/countactivities", function(req, resExpress) {
+    bucklistQueries.countActivities(function(data) {
+      //console.log(data);
+      resExpress.json(data);
+    });
+  });
 };

@@ -143,6 +143,20 @@ var orm = {
 
       cb(result);
     });
+  },
+  countActivities: function(cb) {
+    var queryString = "SELECT count(activityId) AS ActCount";
+    queryString += " FROM bucketLists";
+    queryString += " GROUP BY activityId";
+
+    connection.query(queryString, function(
+      err,
+      result
+    ) {
+      if (err) throw err;
+      console.log("Number of activities = " + result);
+      cb(result);
+    });
   }
 }; // end orm var
 
