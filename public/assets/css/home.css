@@ -344,7 +344,7 @@ header.masthead {
 #user-profile-list {
     position: absolute;
     margin-left: 109px;
-    margin-top: 93px;
+    margin-top: 120px;
     padding: 0%;
     overflow: scroll;
     width: 230px;
@@ -371,27 +371,72 @@ h2 {
 
 /* row of buddies */
 #buddy-row-paint {
-    height: 241px;
+    height: 270px;
     overflow-y: auto;
     position: relative;
-    margin-left: -5%;
+    margin-left: 0px;
 }
 
 /* Avatars bottom row */
 .circle {
+
+    line-height: 0;
+    display: inline-block;
+    margin: 8px;
+    border: 4px solid rgba(200, 200, 200, 0.4);
+    border-radius: 55%;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.4);
+    transition: linear 0.25s;
+    height: 71px;
+    width: 50px;
+    padding-right: 63px;
+
     line-height: 0;
     /* remove line-height */
     display: inline-block;
     /* circle wraps image */
-    margin: 5px;
+    margin: 8px;
     border: 4px solid rgba(200, 200, 200, 0.4);
-    border-radius: 50%;
+    border-radius: 55%;
     /* relative value */
-    /*box-shadow: 0px 0px 5px rgba(0,0,0,0.4);*/
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.4);
     transition: linear 0.25s;
-    height: 67px;
-    width: 67px;
+    height: 71px;
+    width: 50px;
+    padding-right: 63px;
     /* position: absolute; */
+}
+
+#cir0{
+margin-right: 10%;
+margin-left: -4px;
+}
+#cir1{
+   margin-left: 5%; 
+}
+#cir2{
+    margin-right: 32px;
+    margin-left: 78px;
+}
+#cir3{
+    margin-left: 90px;
+}
+#cir4{
+    margin-left: 81px;
+}
+#cir5{
+    margin-left: 135px;
+}
+
+.budIcons {
+    /* padding: 10%; */
+}
+
+.col {
+    position: relative;
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
 }
 
 .circle img {
@@ -411,12 +456,16 @@ p.circle-text {
     color: transparent;
     display: inline;
     float: left;
+    margin-right: 17px;
 }
 
 #avatar-icon-row {
     display: inline;
     float: left;
-    white-space: nowrap;
+    margin-top: -17%;
+    margin-right: 51px;
+    margin-left: 56px;
+    width: 100%;
 
 }
 
