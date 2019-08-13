@@ -5,6 +5,16 @@ select * from bucketlists
 select * from activities
 select * from categories
 
+select * from bucketlists
+
+INSERT INTO bucketlists (userid, activityId)
+VALUES (8, 8);
+
+DELETE FROM bucketlists 
+WHERE id = 26
+
+use bucketbuddy_db
+SELECT * FROM activities WHERE categoryId = 1
 SELECT userprofiles.uid, userprofiles.name, bucketlists.activityId, activities.activity, activities.categoryId, categories.category
 FROM userprofiles
 INNER JOIN bucketlists ON userprofiles.id = bucketlists.userId

@@ -68,7 +68,7 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/api/insertmylist/:userid/:actid", function(req, resExpress) {
+  app.post("/api/insertmylist/:userid/:actid", function(req, resExpress) {
     bucklistQueries.insertMyList(
       ["userid", "activityId"],
       [req.params.userid, req.params.actid],
