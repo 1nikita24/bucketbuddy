@@ -68,8 +68,8 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/api/insertactivity/:userid/:actid", function(req, resExpress) {
-    bucklistQueries.insertActivity(
+  app.get("/api/insertmylist/:userid/:actid", function(req, resExpress) {
+    bucklistQueries.insertMyList(
       ["userid", "activityId"],
       [req.params.userid, req.params.actid],
       function(result) {
@@ -77,5 +77,18 @@ module.exports = function(app) {
         resExpress.json({ id: result.insertId });
       }
     );
+  });
+
+  app.delete("/api/deletemylist/:id", function(req, res) {
+    var condition = "id = " + req.params.id;
+
+    bucklistQueries.deleteMyList(condition, function(result) {
+      if (result.affectedRows == 0) {
+        // If no rows were changed, then the ID must not exist, so 404
+        return res.status(404).end();
+      } else {
+        res.status(200).end();
+      }
+    });
   });
 };

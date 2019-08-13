@@ -49,7 +49,7 @@ var orm = {
   },
   selectMyList: function(valOfCol, cb) {
     var queryString =
-      "SELECT userProfiles.uid, userProfiles.name, bucketLists.activityId, activities.activity, activities.categoryId, categories.category";
+      "SELECT userProfiles.uid, userProfiles.name, bucketLists.id As bucketListsId, bucketLists.activityId, activities.activity, activities.categoryId, categories.category";
     queryString += " FROM userProfiles";
     queryString +=
       " INNER JOIN bucketLists ON userProfiles.id = bucketLists.userId";
@@ -91,7 +91,7 @@ var orm = {
   },
   findBuddies: function(valOfActId, valOfUid, cb) {
     var queryString =
-      "SELECT DISTINCT activities.activity, categories.category, userProfiles.name";
+      "SELECT DISTINCT activities.activity, categories.category, userProfiles.name, userProfiles.photoUrl";
     queryString += " FROM userProfiles";
     queryString +=
       " INNER JOIN bucketLists ON userProfiles.id = bucketLists.userId";
@@ -111,7 +111,7 @@ var orm = {
       cb(result);
     });
   },
-  insertActivity: function(table, cols, vals, cb) {
+  insertMyList: function(table, cols, vals, cb) {
     var queryString = "INSERT INTO " + table;
 
     queryString += " (";
@@ -124,6 +124,19 @@ var orm = {
     console.log(queryString);
 
     connection.query(queryString, vals, function(err, result) {
+      if (err) {
+        throw err;
+      }
+
+      cb(result);
+    });
+  },
+  deleteMyList: function(table, condition, cb) {
+    var queryString = "DELETE FROM " + table;
+    queryString += " WHERE ";
+    queryString += condition;
+
+    connection.query(queryString, function(err, result) {
       if (err) {
         throw err;
       }

@@ -2,7 +2,7 @@
 // This is provided by firebase
 // module.exports = function(firebase) {
 $(document).ready(function(){
-
+    
 
 const config = {
     apiKey: "AIzaSyDQMEHSABIOUwEvI3I011HfvInU8uVpKVU",
@@ -13,6 +13,8 @@ const config = {
     messagingSenderId: "586786546693",
     appId: "1:586786546693:web:eb6093e114a5636c"
 };
+
+
 // INITIALIZE FIREBASE AUTH
 firebase.initializeApp(config);
 console.log(firebase);
@@ -37,6 +39,8 @@ $(document).on('click', '.log-in', function () {
 // Logout Button listener and function
 $(document).on('click', '.log-out', function () {
     auth.signOut().then(() => {
+        
+        
         //          $(this).removeClass('log-out')
         //            .addClass('log-in')
         //            .html('Login With Google');
