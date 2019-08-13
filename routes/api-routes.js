@@ -22,23 +22,39 @@ module.exports = function(app) {
   app.get("/api/userprofile/:uid", function(req, resExpress) {
     userId = req.params.uid;
     bucklistQueries.selectUserPofile(userId, function(data) {
-      console.log(data);
+      // console.log(data);
       resExpress.json(data);
     });
+  });
+
+  // ============ Get all activities by Category (selectByCategory) ============
+  app.get("/api/actbycat/:categoryId", function(req, resExpress) {
+    categoryId = req.params.categoryId;
+    if (categoryId < 1 || categoryId > 6) {
+      bucklistQueries.selectAllActivities(function(data) {
+        // console.log(data);
+        resExpress.json(data);
+      });
+    } else {
+      bucklistQueries.selectActivitiesByCategory(categoryId, function(data) {
+        // console.log(data);
+        resExpress.json(data);
+      });
+    }
   });
 
   // ============ Get users bucklist items ============
   app.get("/api/mylist/:uid", function(req, resExpress) {
     userId = req.params.uid;
     bucklistQueries.selectMyList(userId, function(data) {
-      console.log(data);
+      // console.log(data);
       resExpress.json(data);
     });
   });
   // ============ Get all categories ===============
   app.get("/api/categories", function(req, resExpress) {
     bucklistQueries.selectCategories(function(data) {
-      console.log(data);
+      // console.log(data);
       resExpress.json(data);
     });
   });
@@ -46,9 +62,20 @@ module.exports = function(app) {
   app.get("/api/findbuddies/:actId/:uid", function(req, resExpress) {
     actId = req.params.actId;
     uid = req.params.uid;
-    bucklistQueries.findBuddies(actId,uid,function(data) {
-      console.log(data);
+    bucklistQueries.findBuddies(actId, uid, function(data) {
+      // console.log(data);
       resExpress.json(data);
     });
   });
-}
+
+  app.get("/api/insertactivity/:userid/:actid", function(req, resExpress) {
+    bucklistQueries.insertActivity(
+      ["userid", "activityId"],
+      [req.params.userid, req.params.actid],
+      function(result) {
+        // Send back the ID of the new bucketlist item
+        resExpress.json({ id: result.insertId });
+      }
+    );
+  });
+};
