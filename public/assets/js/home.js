@@ -9,13 +9,14 @@ $(function () {
     let userDBid = "";
 
     //===================TARGETED HTML ELEMENTS USING JQuery===================//
-    const $bucketProContainer = $('#user-profile-list');
-    const $userConsole = $('#user-console');
-    const $advCatSelect = $('#adv-text');
-    const $traCatSelect = $('#tra-text');
-    const $eduCatSelect = $('#edu-text');
-    const $romCatSelect = $('#rom-text');
+    let $bucketProContainer = $('#user-profile-list');
+    let $userConsole = $('#user-console');
+    var $advCatSelect = $('#adv-text');
+    let $traCatSelect = $('#tra-text');
+    let $eduCatSelect = $('#edu-text');
+    let $romCatSelect = $('#rom-text');
     const $entCatSelect = $('#ent-text');
+
     const $uniCatSelect = $('#uni-text');
     const $allCatSelect = $('#all-text');
 
@@ -28,7 +29,7 @@ $(function () {
             let activity = activities[i];
             $bucketProContainer.append(`
             <p class="" data-type="activity">${activity.activity}
-            <i class="fas fa-trash-alt ml-2" id="${activity.id}"></i></p>`)
+            <i class="fas fa-trash-alt ml-2" data-bucketListId="${activity.bucketListsId}"></i></p>`)
         }
     }
 
@@ -113,7 +114,8 @@ $(function () {
 
 
     //===============Button Click Functions===============//
-    $(document).on('click', $advCatSelect, function(){
+    $("#adv-txt").on("click", function () {
+        console.log("clicked adventure")
         let queryString = "/api/actbycat/1";
         $.ajax({
             url: queryString,
@@ -123,7 +125,8 @@ $(function () {
         });
     } );
 
-    $(document).on('click', $traCatSelect, function(){
+    $("#tra-txt").on("click", function () {
+        console.log("clicked travel")
         let queryString = "/api/actbycat/2";
         $.ajax({
             url: queryString,
@@ -133,7 +136,7 @@ $(function () {
         });
     } );
 
-    $(document).on('click', $eduCatSelect, function(){
+    $("#edu-txt").on("click", function () {
         let queryString = "/api/actbycat/3";
         $.ajax({
             url: queryString,
@@ -143,7 +146,7 @@ $(function () {
         });
     } );
 
-    $(document).on('click', $romCatSelect, function(){
+    $("#rom-txt").on("click", function () {
         let queryString = "/api/actbycat/4";
         $.ajax({
             url: queryString,
@@ -153,7 +156,7 @@ $(function () {
         });
     } );
 
-    $(document).on('click', $entCatSelect, function(){
+    $("#ent-txt").on("click", function () {
         let queryString = "/api/actbycat/5";
         $.ajax({
             url: queryString,
@@ -163,7 +166,7 @@ $(function () {
         });
     } );
 
-    $(document).on('click', $uniCatSelect, function(){
+    $("#uni-txt").on("click", function () {
         let queryString = "/api/actbycat/6";
         $.ajax({
             url: queryString,
@@ -173,7 +176,7 @@ $(function () {
         });
     } );
 
-    $(document).on('click', $allCatSelect, function(){
+    $("#all-txt").on("click", function () {
         let queryString = "/api/actbycat/7";
         $.ajax({
             url: queryString,
