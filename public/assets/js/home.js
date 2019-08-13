@@ -11,6 +11,7 @@ $(function () {
     //===================TARGETED HTML ELEMENTS USING JQuery===================//
     let $bucketProContainer = $('#user-profile-list');
     let $userConsole = $('#user-console');
+    let $buddyIconRow = $('#avatar-icon-row');
 
 
     //===================FUNCTIONS CALLED IN AJAX CALLS ===================//
@@ -22,6 +23,7 @@ $(function () {
             let activity = activities[i];
             $bucketProContainer.append(`
             <p class="bltxt" data-type="activity">${activity.activity}
+            <i class="fas fa-user-check" id="${activity.activityId}"></i>
             <i class="fas fa-trash-alt ml-2" id="${activity.bucketListsId}"></i></p>`)
         }
     }
@@ -40,8 +42,30 @@ $(function () {
         }
     }
 
+    let myBuddyList = function (data) {
+        console.log(data);
+        $buddyIconRow.empty();
 
+        for (let i = 0; i < 6; i++) {
+            if (data[i]) {
+                $buddyIconRow.append(`
+            <span class="budIcons"><a href=#add-Buddy class="circle" id="cir${i}">
+            <img height="63" width="63"
+             src="${data[i].photoUrl}" alt="Buddy Avatar"></a></span>`)
+            } else {
+                $buddyIconRow.append(`
+            <span class="budIcons"><a href=#add-Buddy class="circle" id="cir${i}">
+            <img height="63" width="63"
+             src="https://previews.123rf.com/images/blankstock/blankstock1402/blankstock140202174/25833750-no-user-sign-icon-do-not-enter-person-symbol-human-avatar-red-prohibition-sign-stop-symbol-.jpg" alt="The Dude"></a></span>`)
+            }
+        }
+    }
 
+    {
+        /* <p>${data[i].name}</p> */ }
+    // $buddyIconRow.append(`<h2 class="section-heading text-uppercase text-center"><span id="red">B</span>U<span
+    // id="orange">D</span>D<span id="yellow">I</span>E<span id="green">S</span> <span id="blue">L</span>I<span
+    // id="purple">S</span>T</h2>`)
 
 
 
@@ -190,9 +214,9 @@ $(function () {
             url: queryString,
             method: "delete"
         }).then(function (data) {
-            
+
             handleMyListSearch(userArr[0].uid);
-            
+
         });
     });
 
@@ -201,7 +225,7 @@ $(function () {
 
     $(document).on("click", ".fa-plus", function () {
         let addCatId = $(this).attr("id");
-        let queryString = "/api/insertmylist/" + userDBid + "/" +addCatId;
+        let queryString = "/api/insertmylist/" + userDBid + "/" + addCatId;
         $.ajax({
             url: queryString,
             method: "post"
@@ -210,6 +234,19 @@ $(function () {
         });
     });
 
+
+    //----------Find Buddies based on activity function -----------//
+
+    $(document).on("click", ".fa-user-check", function () {
+        let actId = $(this).attr("id");
+        let queryString = "/api/findbuddies/" + actId + "/" + userArr[0].uid;
+        $.ajax({
+            url: queryString,
+            method: "get"
+        }).then(function (data) {
+            myBuddyList(data);
+        });
+    });
 
 
 
