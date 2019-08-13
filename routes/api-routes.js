@@ -70,7 +70,7 @@ module.exports = function(app) {
 
   app.post("/api/insertmylist/:userid/:actid", function(req, resExpress) {
     bucklistQueries.insertMyList(
-      ["userid", "activityId"],
+      ["userId", "activityId"],
       [req.params.userid, req.params.actid],
       function(result) {
         // Send back the ID of the new bucketlist item
