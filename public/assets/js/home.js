@@ -11,17 +11,10 @@ $(function () {
     //===================TARGETED HTML ELEMENTS USING JQuery===================//
     let $bucketProContainer = $('#user-profile-list');
     let $userConsole = $('#user-console');
-    var $advCatSelect = $('#adv-text');
-    let $traCatSelect = $('#tra-text');
-    let $eduCatSelect = $('#edu-text');
-    let $romCatSelect = $('#rom-text');
-    const $entCatSelect = $('#ent-text');
 
-    const $uniCatSelect = $('#uni-text');
-    const $allCatSelect = $('#all-text');
 
     //===================FUNCTIONS CALLED IN AJAX CALLS ===================//
-    
+
     //function to diplay list items
     let myBucketList = function (activities) {
         $bucketProContainer.empty();
@@ -29,12 +22,12 @@ $(function () {
             let activity = activities[i];
             $bucketProContainer.append(`
             <p class="" data-type="activity">${activity.activity}
-            <i class="fas fa-trash-alt ml-2" data-bucketListId="${activity.bucketListsId}"></i></p>`)
+            <i class="fas fa-trash-alt ml-2" id="${activity.bucketListsId}"></i></p>`)
         }
     }
 
     //--------function to display result list in console
-    let myResultList = function(data){
+    let myResultList = function (data) {
         console.log(data);
         $userConsole.empty();
         $userConsole.append(`<h2 class="section-heading text-uppercase text-center"><span id="red">C</span>O<span
@@ -43,11 +36,11 @@ $(function () {
         for (let i = 0; i < data.length; i++) {
             $userConsole.append(`
             <p class="" data-type="activity">${data[i].activity}
-            <i class="fa fa-plus ml-2" id="cat${data[i].id}"></i></p>`)
+            <i class="fa fa-plus ml-2" id="${data[i].id}"></i></p>`)
         }
     }
 
-   
+
 
 
 
@@ -67,7 +60,7 @@ $(function () {
         });
     };
 
-    let handleUserSearch = function(uid){
+    let handleUserSearch = function (uid) {
         let queryString = "/api/userprofile/" + uid;
         $.ajax({
             url: queryString,
@@ -77,7 +70,7 @@ $(function () {
         });
     }
 
-    let handleCatSearch = function(catID){
+    let handleCatSearch = function (catID) {
         console.log("running handle cat search")
         let queryString = "/api/actbycat/" + catID;
         $.ajax({
@@ -98,22 +91,24 @@ $(function () {
         });
     }
     // store current user in userArr
-    getCurrentUser(auth).then(function (data) { 
+    getCurrentUser(auth).then(function (data) {
         userArr.push({
-            uid: data.uid, 
+            uid: data.uid,
             displayName: data.displayName,
             photoURL: data.photoURL
-         });
+        });
         // call Functions used to display content
         handleMyListSearch(userArr[0].uid);
         handleUserSearch(userArr[0].uid);
-        
+
     });
 
 
 
 
     //===============Button Click Functions===============//
+
+    //--------------Catagory Bucket Header Clicks-------------//
     $("#adv-txt").on("click", function () {
         console.log("clicked adventure")
         let queryString = "/api/actbycat/1";
@@ -123,7 +118,7 @@ $(function () {
         }).then(function (data) {
             myResultList(data)
         });
-    } );
+    });
 
     $("#tra-txt").on("click", function () {
         console.log("clicked travel")
@@ -134,7 +129,7 @@ $(function () {
         }).then(function (data) {
             myResultList(data)
         });
-    } );
+    });
 
     $("#edu-txt").on("click", function () {
         let queryString = "/api/actbycat/3";
@@ -144,7 +139,7 @@ $(function () {
         }).then(function (data) {
             myResultList(data)
         });
-    } );
+    });
 
     $("#rom-txt").on("click", function () {
         let queryString = "/api/actbycat/4";
@@ -154,7 +149,7 @@ $(function () {
         }).then(function (data) {
             myResultList(data)
         });
-    } );
+    });
 
     $("#ent-txt").on("click", function () {
         let queryString = "/api/actbycat/5";
@@ -164,7 +159,7 @@ $(function () {
         }).then(function (data) {
             myResultList(data)
         });
-    } );
+    });
 
     $("#uni-txt").on("click", function () {
         let queryString = "/api/actbycat/6";
@@ -174,7 +169,7 @@ $(function () {
         }).then(function (data) {
             myResultList(data)
         });
-    } );
+    });
 
     $("#all-txt").on("click", function () {
         let queryString = "/api/actbycat/7";
@@ -184,9 +179,40 @@ $(function () {
         }).then(function (data) {
             myResultList(data)
         });
-    } );
-   
-    
+    });
+
+    //-----------------Result Console Click function---------//
+
+    $(document).on("click", ".fa-trash-alt", function () {
+        let delCatId = $(this).attr("id");
+        let queryString = "/api/deletemylist/" + delCatId;
+        $.ajax({
+            url: queryString,
+            method: "delete"
+        }).then(function (data) {
+            
+            handleMyListSearch(userArr[0].uid);
+            
+        });
+    });
+
+    //----------------- Bucket List click functions------------//
+
+
+    $(document).on("click", ".fa-plus", function () {
+        
+        let addCatId = $(this).attr("id");
+        let queryString = "/api/insertmylist/" + userDBid + "/" +addCatId;
+        $.ajax({
+            url: queryString,
+            method: "get"
+        }).then(function (data) {
+            handleMyListSearch(userArr[0].uid);
+        });
+    });
+
+
+
 
 
 
