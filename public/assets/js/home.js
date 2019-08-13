@@ -11,13 +11,13 @@ $(function () {
     //===================TARGETED HTML ELEMENTS USING JQuery===================//
     const $bucketProContainer = $('#user-profile-list');
     const $userConsole = $('#user-console');
-    const $advCatSelect = $();
-    const $traCatSelect = $();
-    const $eduCatSelect = $();
-    const $romCatSelect = $();
-    const $entCatSelect = $();
-    const $uniCatSelect = $();
-    const $allCatSelect = $();
+    const $advCatSelect = $('#adv-text');
+    const $traCatSelect = $('#tra-text');
+    const $eduCatSelect = $('#edu-text');
+    const $romCatSelect = $('#rom-text');
+    const $entCatSelect = $('#ent-text');
+    const $uniCatSelect = $('#uni-text');
+    const $allCatSelect = $('#all-text');
 
     //===================FUNCTIONS CALLED IN AJAX CALLS ===================//
     
@@ -33,15 +33,20 @@ $(function () {
     }
 
     //--------function to display result list in console
-    let myResultList = function(results){
+    let myResultList = function(data){
+        console.log(data);
         $userConsole.empty();
-        for (let i = 0; i < results.length; i++) {
-            let listItem = results[i];
-            $bucketProContainer.append(`
-            <p class="" data-type="activity">${results.activity}
-            <i class="fa fa-plus ml-2" id="${activity.id}"></i></p>`)
+        $userConsole.append(`<h2 class="section-heading text-uppercase text-center"><span id="red">C</span>O<span
+        id="orange">N</span>S<span id="yellow">O</span>L<span id="green">E</span> <span id="blue">M</span>I<span
+        id="purple">D</span></h2>`)
+        for (let i = 0; i < data.length; i++) {
+            $userConsole.append(`
+            <p class="" data-type="activity">${data[i].activity}
+            <i class="fa fa-plus ml-2" id="cat${data[i].id}"></i></p>`)
         }
     }
+
+   
 
 
 
@@ -50,7 +55,7 @@ $(function () {
     //===================AJAX API CALLS===================//
 
     //AJAX Call to get my list JSON object from api
-    let getJSONactivities = function () {
+    let handleMyListSearch = function () {
         let queryString = "/api/mylist/" + userArr[0].uid;
         $.ajax({
             url: queryString,
@@ -61,7 +66,7 @@ $(function () {
         });
     };
 
-    let getJSONUserProfile = function(uid){
+    let handleUserSearch = function(uid){
         let queryString = "/api/userprofile/" + uid;
         $.ajax({
             url: queryString,
@@ -71,8 +76,9 @@ $(function () {
         });
     }
 
-    let getJSONResultList = function(catID){
-        let queryString = "/api/userprofile/" + catID;
+    let handleCatSearch = function(catID){
+        console.log("running handle cat search")
+        let queryString = "/api/actbycat/" + catID;
         $.ajax({
             url: queryString,
             method: "GET"
@@ -98,8 +104,8 @@ $(function () {
             photoURL: data.photoURL
          });
         // call Functions used to display content
-        getJSONactivities(userArr[0].uid);
-        getUserProfile(userArr[0].uid);
+        handleMyListSearch(userArr[0].uid);
+        handleUserSearch(userArr[0].uid);
         
     });
 
@@ -107,9 +113,75 @@ $(function () {
 
 
     //===============Button Click Functions===============//
+    $(document).on('click', $advCatSelect, function(){
+        let queryString = "/api/actbycat/1";
+        $.ajax({
+            url: queryString,
+            method: "GET"
+        }).then(function (data) {
+            myResultList(data)
+        });
+    } );
 
-    $
+    $(document).on('click', $traCatSelect, function(){
+        let queryString = "/api/actbycat/2";
+        $.ajax({
+            url: queryString,
+            method: "GET"
+        }).then(function (data) {
+            myResultList(data)
+        });
+    } );
 
+    $(document).on('click', $eduCatSelect, function(){
+        let queryString = "/api/actbycat/3";
+        $.ajax({
+            url: queryString,
+            method: "GET"
+        }).then(function (data) {
+            myResultList(data)
+        });
+    } );
+
+    $(document).on('click', $romCatSelect, function(){
+        let queryString = "/api/actbycat/4";
+        $.ajax({
+            url: queryString,
+            method: "GET"
+        }).then(function (data) {
+            myResultList(data)
+        });
+    } );
+
+    $(document).on('click', $entCatSelect, function(){
+        let queryString = "/api/actbycat/5";
+        $.ajax({
+            url: queryString,
+            method: "GET"
+        }).then(function (data) {
+            myResultList(data)
+        });
+    } );
+
+    $(document).on('click', $uniCatSelect, function(){
+        let queryString = "/api/actbycat/6";
+        $.ajax({
+            url: queryString,
+            method: "GET"
+        }).then(function (data) {
+            myResultList(data)
+        });
+    } );
+
+    $(document).on('click', $allCatSelect, function(){
+        let queryString = "/api/actbycat/7";
+        $.ajax({
+            url: queryString,
+            method: "GET"
+        }).then(function (data) {
+            myResultList(data)
+        });
+    } );
    
     
 
