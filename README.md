@@ -84,8 +84,6 @@ node server.js
 Shout out to team "BucketBuddy"! 
 @Mike, @Venessa, @Greg, @Nikita, @George
 
-#### Anything else that seems useful
-
 ## License
 MIT ©
 Firebase
