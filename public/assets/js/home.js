@@ -23,7 +23,7 @@ $(function () {
             let activity = activities[i];
             $bucketProContainer.append(`
             <p class="bltxt" data-type="activity" id="bltxtid"><i class="fas fa-user-check" id="${activity.activityId}"></i>
-            <i class="fas fa-trash-alt ml-2" id="${activity.bucketListsId}"></i>${activity.activity}
+            <i class="fas fa-trash-alt ml-2" id="${activity.bucketListsId}"></i>  ${activity.activity}
             </p>`)
         }
     }
