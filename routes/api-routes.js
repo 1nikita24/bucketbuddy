@@ -68,9 +68,9 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/api/insertmylist/:userid/:actid", function(req, resExpress) {
+  app.post("/api/insertmylist/:userid/:actid", function(req, resExpress) {
     bucklistQueries.insertMyList(
-      ["userid", "activityId"],
+      ["userId", "activityId"],
       [req.params.userid, req.params.actid],
       function(result) {
         // Send back the ID of the new bucketlist item
@@ -89,6 +89,13 @@ module.exports = function(app) {
       } else {
         res.status(200).end();
       }
+    });
+  });
+  // ============ Get the count of all activites for ChartKick ===============
+  app.get("/api/countactivities", function(req, resExpress) {
+    bucklistQueries.countActivities(function(data) {
+      //console.log(data);
+      resExpress.json(data);
     });
   });
 };
