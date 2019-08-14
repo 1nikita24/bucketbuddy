@@ -4,6 +4,8 @@ $.get("/api/countactivities", function(data) {
     console.log(data);
     for (var i = 0; i < 10; i++) {
         arrData.push(data[i].ActCount)
+        labelArr.push(data[i].activity)
+
     };
     console.log(arrData);
 
@@ -12,7 +14,7 @@ $.get("/api/countactivities", function(data) {
     var myChart = new Chart(ctx, {
         type: 'doughnut',
         data: {
-            labels: ['Skydiving', 'Run Marathon', 'New Language', 'Go to Alaska', 'Go camping', 'Live in Hobbit Hole','Go to Superbowl','Ride Tandom bike','Meet Bill Gates','Climb Mt.Everst'],
+            labels: labelArr,
             datasets: [{
                 label: 'Trending',
                 data: arrData,

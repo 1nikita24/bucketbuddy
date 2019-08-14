@@ -61,8 +61,8 @@ $(function () {
         }
     }
 
-    {
-        /* <p>${data[i].name}</p> */ }
+    
+        /* <p>${data[i].name}</p> */ 
     // $buddyIconRow.append(`<h2 class="section-heading text-uppercase text-center"><span id="red">B</span>U<span
     // id="orange">D</span>D<span id="yellow">I</span>E<span id="green">S</span> <span id="blue">L</span>I<span
     // id="purple">S</span>T</h2>`)
@@ -249,9 +249,28 @@ $(function () {
         });
     });
 
+    //----------search button function -----------//
 
-
-
+    let handleSearchAct = function (event) {
+        event.preventDefault()
+        let searchForWords = $("#searchInput").val().trim().split(" ").toString();
+        console.log(searchForWords)
+    
+          $.ajax({
+            url: `/api/activities/${searchForWords}`,
+            method: "GET"
+           
+          }).then(function (data) {
+            if (data) {
+              displayNotes(data)
+            }
+           
+          });
+         
+        };
+    
+    
+      searchNoteBtn.on("click", handleSearchNote);
 
 
 })
@@ -262,25 +281,4 @@ $(function () {
 
 
 
-
-
-
-
-
-
-//     //Grab user info from firebase auth
-// var user = firebase.auth().currentUser;
-
-// var name, email, photoUrl, uid, emailVerified;
-// if (user != null) {
-//     name = user.displayName;
-//     email = user.email;
-//     photoUrl = user.photoURL;
-//     emailVerified = user.emailVerified;
-//     uid = user.uid;
-// }
-// console.log(user);
-// target areas in home.html using jQuery selectors
-
-// parrallax effect
 
