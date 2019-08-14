@@ -2,7 +2,7 @@ var arrData = [];
 var labelArr = [];
 $.get("/api/countactivities", function(data) {
     
-    for (var i = 0; i < 9; i++) {
+    for (var i = 0; i < 10; i++) {
         console.log(data[i])
         arrData.push(data[i].ActCount)
         labelArr.push(data[i].activity)
