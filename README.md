@@ -80,7 +80,6 @@ Sharing life experiences with people with similiar interests.
 ## How to use?
 node server.js
 
-
 ## Credits
 Shout out to team "BucketBuddy"! 
 @Mike, @Venessa, @Greg, @Nikita, @George
