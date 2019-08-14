@@ -11,7 +11,7 @@ $.get("/api/countactivities", function(data) {
     var myChart = new Chart(ctx, {
         type: 'doughnut',
         data: {
-            labels: ['Romance', 'Travel', 'Education', 'Adventure', 'Unique', 'Entertainment'],
+            labels: ['Adventure', 'Travel', 'Education', 'Romance', 'Sports', 'Unique'],
             datasets: [{
                 label: 'Trending Categoriess',
                 data: arrData,
