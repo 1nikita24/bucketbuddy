@@ -22,9 +22,9 @@ $(function () {
         for (let i = 0; i < activities.length; i++) {
             let activity = activities[i];
             $bucketProContainer.append(`
-            <p class="bltxt" data-type="activity">${activity.activity}
-            <i class="fas fa-user-check" id="${activity.activityId}"></i>
-            <i class="fas fa-trash-alt ml-2" id="${activity.bucketListsId}"></i></p>`)
+            <p class="bltxt" data-type="activity" id="bltxtid"><i class="fas fa-user-check" id="${activity.activityId}"></i>
+            <i class="fas fa-trash-alt ml-2" id="${activity.bucketListsId}"></i>${activity.activity}
+            </p>`)
         }
     }
 
@@ -32,13 +32,13 @@ $(function () {
     let myResultList = function (data) {
         console.log(data);
         $userConsole.empty();
-        $userConsole.append(`<h2 class="section-heading text-uppercase text-center"><span id="red">C</span>O<span
-        id="orange">N</span>S<span id="yellow">O</span>L<span id="green">E</span> <span id="blue">M</span>I<span
-        id="purple">D</span></h2>`)
+        $userConsole.append(`<h2 class="section-heading text-uppercase text-center" id="console-header"><span id="red">S</span>E<span
+        id="orange">L</span>E<span id="yellow">C</span>T<span id="green"> I</span>T<span id="blue">E</span>M<span
+        id="purple">!</span></h2>`)
         for (let i = 0; i < data.length; i++) {
             $userConsole.append(`
-            <p class="" data-type="activity">${data[i].activity}
-            <i class="fa fa-plus ml-2" id="${data[i].id}"></i></p>`)
+            <p class="" data-type="activity"><i class="fa fa-plus ml-2" id="${data[i].id}"></i> ${data[i].activity}
+            </p>`)
         }
     }
 
@@ -280,3 +280,6 @@ $(function () {
 // }
 // console.log(user);
 // target areas in home.html using jQuery selectors
+
+// parrallax effect
+
