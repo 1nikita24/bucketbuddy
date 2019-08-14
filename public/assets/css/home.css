@@ -104,11 +104,7 @@ p {
     font-family: 'dancing script';
 }
 
-#bltxtid {
-    font-family: 'Lato', sans-serif;
-    font-size: 124%;
-    opacity: 1.0;
-}
+
 
 a {
     color: #fed136;
@@ -147,10 +143,12 @@ h6 {
 }
 
 #piechart {
-    height: 80px;
-    width: 400px;
-    margin-bottom:50px;
-    
+    padding-top: 4%;
+    background-color: white;
+
+}
+#myChart {
+    background-color: #fff;
 }
 
 @media (min-width: 768px) {
@@ -347,8 +345,6 @@ header.masthead {
     background-color: none;
 }
 
-
-
 /* user left profile list */
 #user-profile-list {
     position: absolute;
@@ -364,6 +360,13 @@ header.masthead {
     padding-left: 10px;
     padding-right: 10px;
     text-align: left;
+    
+}
+
+#bltxtid {
+    font-family: 'dancing script';
+    font-size: 144%;
+    opacity: 1.0;
 }
 
 /* User Console */
@@ -374,7 +377,9 @@ header.masthead {
     border: solid;
     margin-top: 2%;
     background-color: white;
-    overflow: scroll
+    overflow: auto;
+    height: 550px;
+    width: auto;
 }
 
 #console-header {
@@ -382,6 +387,7 @@ header.masthead {
     padding-bottom: 0.5%;
     background-color: white;
 }
+
 #bucklist-header {
     margin-top: 10%;
     text-align: justify;
@@ -390,7 +396,6 @@ header.masthead {
     margin-bottom: -6%;
     font-size: 45px;
 }
-
 
 h2 {
     font-family: 'Finger Paint', cursive;
@@ -406,13 +411,12 @@ h2 {
 
 /* Avatars bottom row */
 .circle {
-
     line-height: 0;
     display: inline-block;
     margin: 8px;
     border: 4px solid rgba(200, 200, 200, 0.4);
     border-radius: 55%;
-    box-shadow: 0px 0px 5px rgba(0,0,0,0.4);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
     transition: linear 0.25s;
     line-height: 0;
     /* remove line-height */
@@ -421,7 +425,7 @@ h2 {
     border: 4px solid rgba(200, 200, 200, 0.4);
     border-radius: 55%;
     /* relative value */
-    box-shadow: 0px 0px 5px rgba(0,0,0,0.4);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
     transition: linear 0.25s;
     height: 71px;
     width: 50px;
@@ -429,29 +433,30 @@ h2 {
     /* position: absolute; */
 }
 
-#cir0{
-margin-right: 8%;
-margin-left: 3px;
+#cir0 {
+    margin-right: 8%;
+    margin-left: 3px;
 }
-#cir1{
-   margin-left: 5%; 
+
+#cir1 {
+    margin-left: 5%;
 }
-#cir2{
+
+#cir2 {
     margin-right: 32px;
     margin-left: 100px;
 }
-#cir3{
+
+#cir3 {
     margin-left: 90px;
 }
-#cir4{
-    margin-left: 100px;
-}
-#cir5{
+
+#cir4 {
     margin-left: 100px;
 }
 
-.budIcons {
-    /* padding: 10%; */
+#cir5 {
+    margin-left: 100px;
 }
 
 .col {
@@ -488,7 +493,6 @@ p.circle-text {
     margin-right: 51px;
     margin-left: 56px;
     width: 100%;
-
 }
 
 /* scroll bar */
@@ -541,14 +545,15 @@ p.circle-text {
 
 @keyframes bg-scroll {
     0%: {
-      background-position: 0 0;
+        background-position: 0 0;
     }
+
     100% {
-      background-position: 0 112.5%
+        background-position: 0 112.5%
     }
-  }
-  
-  .wrapper {
+}
+
+.wrapper {
     width: 50%;
     margin: 50px auto;
     background-color: silver;
@@ -556,10 +561,10 @@ p.circle-text {
     vertical-align: middle;
     /* line-height: 100px; */
     border: solid 1px transparent;
-  }
-  
-  .rainbow {
-    
+}
+
+.rainbow {
+
     display: block;
     margin: 50px auto;
     color: white;
@@ -568,11 +573,10 @@ p.circle-text {
     /* font-size: 36px; */
     padding: 10px 50px;
     border-radius: 20px;
-    background-image: linear-gradient(to bottom, red, orange, yellow, green, blue, indigo, violet, red);
+    background-image: linear-gradient(to bottom, rgba(255, 98, 98, 0.911), rgb(250, 179, 49), rgb(253, 253, 61), rgb(57, 252, 57), rgb(103, 103, 253), rgb(157, 73, 218), rgb(229, 149, 229), rgba(255, 98, 98, 0.911));
     background-size: 100% 800%;
     background-repeat: repeat-y;
     -webkit-animation: bg-scroll 10s infinite linear;
     -o-animation: bg-scroll 10s infinite linear;
     animation: bg-scroll 10s infinite linear;
-  }
-
+}

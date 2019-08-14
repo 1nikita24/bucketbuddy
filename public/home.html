@@ -22,15 +22,15 @@
     type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lato|Dancing+Script|Finger+Paint|Roboto+Slab:400,100,300,700'
     rel='stylesheet' type='text/css'>
-<!-- Chartkicker script-->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+  <!-- Chartkicker script-->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
 
   <!-- JQuery Script-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/core.js"></script>
-  
+
   <!-- Custom styles for this template -->
   <link href="assets/css/home.css" rel="stylesheet">
 
@@ -101,56 +101,59 @@
 
   <!-- User Interface -->
   <!-- <section class="page-section" id="user-main"> -->
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 text-center float left">
-          <!-- MY BUCKETLIST and Scrollbar -->
-            <div class=" text-center" id="user-bucketlist">
-                <h2 id="bucklist-header" class="section-heading text-uppercase text-center"><span id="red">M</span>Y<span
-                    id="orange"> B</span>U<span id="yellow">C</span>K<span id="green">E</span><span id="blue">T</span> L<span
-                    id="purple">I</span>S<span id="red">T</span></h2>
-                
-              </div>
-          <img src="./assets/images/sideBucketnobackground.png" class="float-left" id="left-bucket">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 text-center float left">
+        <!-- MY BUCKETLIST and Scrollbar -->
+        <div class=" text-center" id="user-bucketlist">
+          <h2 id="bucklist-header" class="section-heading text-uppercase text-center"><span id="red">M</span>Y<span
+              id="orange"> B</span>U<span id="yellow">C</span>K<span id="green">E</span><span id="blue">T</span> L<span
+              id="purple">I</span>S<span id="red">T</span></h2>
+
+        </div>
+        <img src="./assets/images/sideBucketnobackground.png" class="float-left" id="left-bucket">
         <!-- Bucklist items with Scroll bar -->
-          <div class="rainbow" id="user-profile-list">
+        <div class="rainbow" id="user-profile-list">
         </div>
       </div>
       <!-- User Console and result lists from searches -->
-        <div class="col-md-6 text-center" id="user-console">
-          <h2 id="console-header" class="section-heading text-uppercase text-center"><span id="red">F</span>I<span
+      <div class="col-md-6 text-center" id="user-console">
+        <!-- <h2 id="console-header" class="section-heading text-uppercase text-center"><span id="red">F</span>I<span
               id="orange">L</span>L <span id="yellow"></span>M<span id="green">Y</span> B<span id="blue">U</span>C<span
-              id="purple">K</span>E<span id="red">T</span>!</h2>
+              id="purple">K</span>E<span id="red">T</span>!</h2> -->
+
+        
+          <div class="row">
+            <div class="col-md-12" id="piechart">
+              <h2> Trending Catagories</h2>
+              <canvas id="myChart" width="55" height="50"></canvas>
+            </div>
+          </div>
         </div>
-      </div>
-      <!-- ROW OF BUDDIES  -->
-      <img src="./assets/images/headerpaintPNG.png" id="buddy-row-paint">
-  <!-- </section> -->
+     
+    </div>
+    <!-- ROW OF BUDDIES  -->
+    <img src="./assets/images/headerpaintPNG.png" id="buddy-row-paint">
+    <!-- </section> -->
 
-  <div class="col-lg-12" id="avatar-icon-row"></div>
-
-  <div class="container" id="piechart">
-    <div class="row">
-      <div class=col-md-12>
-        <h2> Trending Catagories</h2>
-  <canvas id="myChart" width="50" height="50"></canvas>
-      </div>
-    </div> 
-  </div>
-  
-  <script src="./assets/js/chartkick.js"></script>
+    <div class="col-lg-12" id="avatar-icon-row"></div>
 
 
 
-  <!-- Add Firebase products that you want to use -->
-  <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-firestore.js"></script>
+    <script src="./assets/js/chartkick.js"></script>
 
-  <script src="./assets/js/firebase.js"></script>
-  <script src="assets/js/home.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-firestore.js"></script>
+
+    <script src="./assets/js/firebase.js"></script>
+    <script src="assets/js/home.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
+
 </html>
