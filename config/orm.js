@@ -145,9 +145,11 @@ var orm = {
     });
   },
   countActivities: function(cb) {
-    var queryString = "SELECT count(activityId) AS ActCount";
+    var queryString = "SELECT activities.activity, count(activityId) AS ActCount"; 
     queryString += " FROM bucketLists";
+    queryString += " INNER JOIN activities ON bucketLists.activityId = activities.id";
     queryString += " GROUP BY activityId";
+    queryString += " ORDER BY ActCount DESC";
 
     connection.query(queryString, function(
       err,
