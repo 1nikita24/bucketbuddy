@@ -1,7 +1,8 @@
 var arrData = [];
+var labelArr = [];
 $.get("/api/countactivities", function(data) {
     console.log(data);
-    for (var i = 0; i < data.length; i++) {
+    for (var i = 0; i < 10; i++) {
         arrData.push(data[i].ActCount)
     };
     console.log(arrData);

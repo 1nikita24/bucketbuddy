@@ -124,6 +124,7 @@ $(function () {
         // call Functions used to display content
         handleMyListSearch(userArr[0].uid);
         handleUserSearch(userArr[0].uid);
+        console.log(userArr);
 
     });
 
