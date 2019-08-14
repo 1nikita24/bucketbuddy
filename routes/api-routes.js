@@ -98,4 +98,25 @@ module.exports = function(app) {
       resExpress.json(data);
     });
   });
+
+  app.get("/api/search/:searchTerms", function (req, res) {
+  
+    let searchParam = req.params.searchTerms
+    searchParam = searchParam.split(",")
+    
+    console.log(searchParam)
+    let queryString= `SELECT * FROM activities WHERE activity LIKE "%${searchParam[0]}%"`;
+  
+    for(let i = 1; i < searchParam.length; i++){
+      queryString += ` OR title LIKE "%${searchParam[i]}%"`
+    }
+    console.log(queryString);
+    connection.query(queryString, function (err, data) {
+      if (err) {
+        return res.status(500).end();
+      }
+      return res.json(data);
+    })
+  });
+
 };

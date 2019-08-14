@@ -251,28 +251,23 @@ $(function () {
 
     //----------search button function -----------//
 
-    // let handleSearchAct = function (event) {
-    //     event.preventDefault()
-    //     let searchForWords = $("#searchInput").val().trim().split(" ").toString();
-    //     console.log(searchForWords)
+    let handleSearchAct = function (event) {
+        event.preventDefault()
+        let searchForWords = $("#searchInput").val().trim().split(" ").toString();
+        console.log(searchForWords)
+        let queryString = "/api/search/" + searchForWords;
     
-    //       $.ajax({
-    //         url: `/api/activities/${searchForWords}`,
-    //         method: "GET"
+          $.ajax({
+            url: queryString,
+            method: "GET"
            
-    //       }).then(function (data) {
-    //         if (data) {
-    //           displayNotes(data)
-    //         }
-           
-    //       });
-         
-    //     };
-    
-    
-    //   searchNoteBtn.on("click", handleSearchNote);
-
-
+          }).then(function (data) {
+            if (data) {
+              myResultList(data);
+            }
+          });
+        };
+      $("#search-activity-btn").on("click", handleSearchAct);
 })
 
 
