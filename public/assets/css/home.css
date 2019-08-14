@@ -153,11 +153,6 @@ h6 {
     
 }
 
-.garbage {
-    height:20px;
-    padding: 50px;
-}
-
 @media (min-width: 768px) {
     section {
         padding: 150px 0;
