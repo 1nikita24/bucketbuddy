@@ -1,37 +1,81 @@
-## Project title and Deployed Link
-A little info about your project and/ or overview that explains **what** the project is about.
+## BucketBuddy - We can do anything...together! **The what**
+Bucket Buddy is an interactive site that enables a user to create a list of all the things they want to try, goals they want to achieve and life experiences they want to have before they die. After creating your own bucket list you are matched with other bucket buddies that have the same list items. Users are matched together and then given the information to be able to complete tasks together as groups.
 
-## Motivation
-A short description of the motivation behind the creation. This should cover **why** the project exists and what drove you to choose this project.
+## Motivation - **The Why**
+Setting up a way to experience unique and once in a life time experiences with others
 
 ## Technologies used and why
-Ex. -
+### Packages
+- dotenv - security
+- express - node web server
+- firebase - authentication
+- mysql - database
+- mysql2 - database (sequelize)
+- sequelize - promised based node.js ORM (database models)
+- ORM - object relational modeling (database models)
 
-<b>Built with</b>
-- [React](https://reactjs.org/)
-<b>is a lightweight front end library that allowed me to create highly reusable components I could use across my application<b>
+### Hosting
+- Heroku - external web server hosting
+
+### Developed with
+#### Front-end
+- HTML5
+- CSS3
+- Bootstrap
+- Fontawesome
+- JQuery
+- AJAX
+- Javascript
+- Firebase
+- [ChartKick](https://www.chartjs.org/docs/latest/)
+<b>Simple yet flexible JavaScript charting for designers & developers<b>
+
+#### Back-end
+- Express
+- Node.js
+- mySQL
+- ORM
+- Sequelize + mySQL2
 
 ## Features
-What makes your project stand out?
+Sharing life experiences with people with similiar interests.
 
 ## Screenshots
-Include logo/demo screenshot etc.
+### logo & demo screenshots
+![BucketBuddy](./readme-files/bucketbuddy-logo-branding.jpg)
 
 ## Code Example
-Show what your project does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
+
+### Routes
+* /api/testserver - tests that the express server is working
+* /api/testdb - tests database connectivity
+* /api/userprofile/:uid - gets user info by firebase uid
+* /api/actbycat/:categoryId - gets activites when user clicks a category
+* /api/mylist/:uid - used to fill the users bucketlist panel
+* /api/categories - returns all categories (not used on site)
+* /api/findbuddies/:actId/:ui -shows buddies who are doing the same activity on the bottom panel.
+* /api/insertmylist/:userid/:actid - adds an activity to users bucket.
+* /api/deletemylist/:id - deletes an activity from a users bucket
+* /api/countactivities - counts by activity category (used by chartkick)
 
 ## Installation
-Provide step by step series of examples and explanations about how to get a development env running.
+- npm i (to install above mentioned npm packages)
+- Create the database manullay by running the db/schema.sql file in mySQL
+- Run server.js which will create the required tables using sequelize
+- Import all the seeders/ files to poplute the tables to sample data
+- Configure your database passwords in the connection.js and config.json files
 
 ## How to use?
-If people like your project they’ll want to learn how they can use it. To do so include step by step guide to use your project.
+node server.js
+
 
 ## Credits
-Give proper credits. This could be a link to any repo which inspired you to build this project, any blogposts or links to people who contrbuted in this project. 
+Shout out to team "BucketBuddy"! 
+@Mike, @Venessa, @Greg, @Nikita, @George
 
 #### Anything else that seems useful
 
 ## License
-A short snippet describing the license (MIT, Apache etc)
-
-MIT © [Yourname]()
+MIT ©
+Firebase
+ChartKick
