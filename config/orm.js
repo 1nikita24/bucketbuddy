@@ -13,7 +13,7 @@ function printQuestionMarks(num) {
 var orm = {
   selectAll: function(whatToSelect, tableInput, cb) {
     var queryString = "SELECT ?? FROM ??";
-    console.log(whatToSelect + ":" + tableInput);
+    // console.log(whatToSelect + ":" + tableInput);
     connection.query(queryString, [whatToSelect, tableInput], function(
       err,
       result
@@ -25,7 +25,7 @@ var orm = {
   },
   selectAllActivities: function(whatToSelect, tableInput, cb) {
     var queryString = "SELECT ?? FROM ??";
-    console.log(whatToSelect + ":" + tableInput);
+    // console.log(whatToSelect + ":" + tableInput);
     connection.query(queryString, [whatToSelect, tableInput], function(
       err,
       result
@@ -67,7 +67,7 @@ var orm = {
   },
   selectCategories: function(whatToSelect, tableInput, cb) {
     var queryString = "SELECT ?? FROM ??";
-    console.log(whatToSelect + ":" + tableInput);
+    // console.log(whatToSelect + ":" + tableInput);
     connection.query(queryString, [whatToSelect, tableInput], function(
       err,
       result
@@ -91,7 +91,7 @@ var orm = {
   },
   findBuddies: function(valOfActId, valOfUid, cb) {
     var queryString =
-      "SELECT DISTINCT activities.activity, categories.category, userProfiles.name, userProfiles.photoUrl";
+      "SELECT DISTINCT activities.activity, categories.category, userProfiles.name, userProfiles.email, userProfiles.photoUrl";
     queryString += " FROM userProfiles";
     queryString +=
       " INNER JOIN bucketLists ON userProfiles.id = bucketLists.userId";
@@ -101,7 +101,7 @@ var orm = {
       " INNER JOIN categories ON activities.categoryId = categories.id";
     queryString += " WHERE bucketLists.activityId = ?";
     queryString += " AND userProfiles.uid <> ?";
-    console.log(valOfActId + ":" + valOfUid);
+    // console.log(valOfActId + ":" + valOfUid);
     connection.query(queryString, [valOfActId, valOfUid], function(
       err,
       result
@@ -121,7 +121,7 @@ var orm = {
     queryString += printQuestionMarks(vals.length);
     queryString += ") ";
 
-    console.log(queryString);
+    // console.log(queryString);
 
     connection.query(queryString, vals, function(err, result) {
       if (err) {
@@ -154,7 +154,7 @@ var orm = {
       result
     ) {
       if (err) throw err;
-      console.log("Number of activities = " + result);
+      // console.log("Number of activities = " + result);
       cb(result);
     });
   }

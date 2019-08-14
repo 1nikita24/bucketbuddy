@@ -4,15 +4,19 @@ select * from userProfiles
 select * from bucketlists
 select * from activities
 select * from categories
-
+use bucketbuddy_db
 select * from bucketlists
 
 INSERT INTO bucketlists (userid, activityId)
 VALUES (8, 8);
-
+select * from categories
 DELETE FROM bucketlists 
 WHERE id = 26
 
+SELECT activityId, count(activityId) AS ActCount FROM bucketLists
+GROUP BY activityId
+
+select * from buketlists
 use bucketbuddy_db
 SELECT * FROM activities WHERE categoryId = 1
 SELECT userprofiles.uid, userprofiles.name, bucketlists.activityId, activities.activity, activities.categoryId, categories.category
