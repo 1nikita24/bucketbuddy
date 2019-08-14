@@ -1,6 +1,12 @@
 ## BucketBuddy - We can do anything...together! **The what**
 Bucket Buddy is an interactive site that enables a user to create a list of all the things they want to try, goals they want to achieve and life experiences they want to have before they die. After creating your own bucket list you are matched with other bucket buddies that have the same list items. Users are matched together and then given the information to be able to complete tasks together as groups.
 
+## Links
+- [GitHub](https://github.com/1nikita24/bucketbuddy)
+- [Heroku](https://still-depths-21016.herokuapp.com)
+- [Trello](https://trello.com/b/qYK8dkQY/bucketbuddy)
+- [Prezi](https://prezi.com/p/pmdfdeyiy7e2/bucketbuddy-presentation/)
+
 ## Motivation - **The Why**
 Setting up a way to experience unique and once in a life time experiences with others
 
@@ -44,6 +50,12 @@ Sharing life experiences with people with similiar interests.
 ### logo & demo screenshots
 ![BucketBuddy](./readme-files/bucketbuddy-logo-branding.jpg)
 
+### Planning
+![Whiteboard-Planning](./readme-files/whiteboard-planning.jpg)
+
+### Mockup
+![Mockup-Sketch](./readme-files/mockup-sketch.jpg)
+
 ## Code Example
 
 ### Routes
@@ -67,7 +79,6 @@ Sharing life experiences with people with similiar interests.
 
 ## How to use?
 node server.js
-
 
 ## Credits
 Shout out to team "BucketBuddy"! 
