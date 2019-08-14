@@ -1,15 +1,13 @@
 var arrData = [];
 var labelArr = [];
 $.get("/api/countactivities", function(data) {
-    console.log(data);
+    
     for (var i = 0; i < 9; i++) {
         console.log(data[i])
         arrData.push(data[i].ActCount)
         labelArr.push(data[i].activity)
 
     };
-    console.log(arrData);
-
 
     var ctx = document.getElementById('myChart').getContext('2d');
     var myChart = new Chart(ctx, {
