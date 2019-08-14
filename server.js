@@ -1,4 +1,7 @@
-// require("dotenv").config();
+//require("dotenv").config();
+var fs = require("fs");
+
+
 
 var express = require("express");
 var sequelize = require("sequelize");
