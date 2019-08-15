@@ -25,7 +25,7 @@
 
 
 body {
-    background-image: url(../images/backgroundImage.jpeg);
+    background-image: url(../images/backgroundImageSmaller.jpeg);
     background-size: 100%;
 
     background-repeat: no-repeat;
@@ -35,7 +35,7 @@ body {
 }
 
 header {
-    background-image: url(../images/rowofpaint.jpeg);
+    background-image: url(../images/rowofpaintSmaller.jpeg);
     background-repeat: no-repeat;
     margin-top: 0%;
     padding-top: 3%;
@@ -371,7 +371,7 @@ header.masthead {
 
 /* User Console */
 #user-console {
-    background-image: url(../images/consoleBackground.jpeg);
+    background-image: url(../images/consoleBackgroundSmaller.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     border: solid;
