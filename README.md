@@ -90,6 +90,35 @@ Sharing life experiences with people with similiar interests.
     };
     $("#search-activity-btn").on("click", handleSearchAct);
 ```
+```js
+    // choosing Google Auth Provider to use in firebase auth settings
+    // assigning white listed domains where it is allowed (ex: localhost)
+    let provider = new firebase.auth.GoogleAuthProvider();
+    let auth = firebase.auth();
+//-----------FIREBASE AUTH FUNCTION
+    //-----------------------function to get the current user from firebase and store in variable-------------//
+    function getCurrentUser(auth) {
+        return new Promise((resolve, reject) => {
+            const unsubscribe = auth.onAuthStateChanged(user => {
+                unsubscribe();
+                resolve(user);
+            }, reject);
+        });
+    }
+    // -----------------store current user in userArr
+    getCurrentUser(auth).then(function (data) {
+        userArr.push({
+            uid: data.uid,
+            displayName: data.displayName,
+            photoURL: data.photoURL
+        });
+        // call Functions used to display content
+        $("#myAvatar").attr("src", userArr[0].photoURL)
+        handleMyListSearch(userArr[0].uid);
+        handleUserSearch(userArr[0].uid);
+        console.log(userArr);
+    });
+```
 
 ## Installation
 - npm i (to install above mentioned npm packages)
