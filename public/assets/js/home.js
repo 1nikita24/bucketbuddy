@@ -1,9 +1,12 @@
 $(function () {
+
     console.log("page is ready");
+
     // choosing Google Auth Provider to use in firebase auth settings
     // assigning white listed domains where it is allowed (ex: localhost)
     let provider = new firebase.auth.GoogleAuthProvider();
     let auth = firebase.auth();
+
     //userArr is an array of 1 object that contains data from firebase authentication
     let userArr = [];
     let userDBid = "";
@@ -13,10 +16,9 @@ $(function () {
     let $userConsole = $('#user-console');
     let $buddyIconRow = $('#avatar-icon-row');
 
+    //===================FUNCTIONS TO BE CALLED LATER IN AJAX CALLS ===================//
 
-    //===================FUNCTIONS CALLED IN AJAX CALLS ===================//
-
-    //function to diplay list items
+    //----------function to diplay list items in left bucket
     let myBucketList = function (activities) {
         $bucketProContainer.empty();
         for (let i = 0; i < activities.length; i++) {
@@ -28,7 +30,7 @@ $(function () {
         }
     }
 
-    //--------function to display result list in console
+    //--------function to display result in right console
     let myResultList = function (data) {
         console.log(data);
         $userConsole.empty();
@@ -42,6 +44,7 @@ $(function () {
         }
     }
 
+    // ----------function to display buddy avatars
     let myBuddyList = function (data) {
         console.log(data);
         $buddyIconRow.empty();
@@ -61,18 +64,9 @@ $(function () {
         }
     }
 
-    
-        /* <p>${data[i].name}</p> */ 
-    // $buddyIconRow.append(`<h2 class="section-heading text-uppercase text-center"><span id="red">B</span>U<span
-    // id="orange">D</span>D<span id="yellow">I</span>E<span id="green">S</span> <span id="blue">L</span>I<span
-    // id="purple">S</span>T</h2>`)
+    //==========================================AJAX API CALLS================================//
 
-
-
-
-    //===================AJAX API CALLS===================//
-
-    //AJAX Call to get my list JSON object from api
+    //-----------------AJAX Call to get my bucket list JSON object from api
     let handleMyListSearch = function () {
         let queryString = "/api/mylist/" + userArr[0].uid;
         $.ajax({
@@ -84,6 +78,7 @@ $(function () {
         });
     };
 
+    //-----------------AJAX Call to get user profile
     let handleUserSearch = function (uid) {
         let queryString = "/api/userprofile/" + uid;
         $.ajax({
@@ -94,6 +89,7 @@ $(function () {
         });
     }
 
+    //-----------------AJAX Call to get results from search bar
     let handleCatSearch = function (catID) {
         console.log("running handle cat search")
         let queryString = "/api/actbycat/" + catID;
@@ -105,7 +101,7 @@ $(function () {
         });
     }
 
-    //function to get the current user from firebase and store in variable
+    //-----------------------function to get the current user from firebase and store in variable-------------//
     function getCurrentUser(auth) {
         return new Promise((resolve, reject) => {
             const unsubscribe = auth.onAuthStateChanged(user => {
@@ -114,9 +110,8 @@ $(function () {
             }, reject);
         });
     }
-    // store current user in userArr
+    // -----------------store current user in userArr
     getCurrentUser(auth).then(function (data) {
-        
         userArr.push({
             uid: data.uid,
             displayName: data.displayName,
@@ -127,15 +122,11 @@ $(function () {
         handleMyListSearch(userArr[0].uid);
         handleUserSearch(userArr[0].uid);
         console.log(userArr);
-
     });
 
+    //----------------Button Click Functions-------------//
 
-
-
-    //===============Button Click Functions===============//
-
-    //--------------Catagory Bucket Header Clicks-------------//
+    //--------------AJAX Call for different Catagory Buckets in Header Clicks
     $("#adv-txt").on("click", function () {
         console.log("clicked adventure")
         let queryString = "/api/actbycat/1";
@@ -208,8 +199,7 @@ $(function () {
         });
     });
 
-    //-----------------Result Console Click function---------//
-
+    //-----------------AJAX Call to Delete item from bucket list
     $(document).on("click", ".fa-trash-alt", function () {
         let delCatId = $(this).attr("id");
         let queryString = "/api/deletemylist/" + delCatId;
@@ -217,15 +207,12 @@ $(function () {
             url: queryString,
             method: "delete"
         }).then(function (data) {
-
             handleMyListSearch(userArr[0].uid);
 
         });
     });
 
-    //----------------- Bucket List click functions------------//
-
-
+    //----------------- AJAX Call to Add item to Bucket List 
     $(document).on("click", ".fa-plus", function () {
         let addCatId = $(this).attr("id");
         let queryString = "/api/insertmylist/" + userDBid + "/" + addCatId;
@@ -237,9 +224,7 @@ $(function () {
         });
     });
 
-
-    //----------Find Buddies based on activity function -----------//
-
+    //----------AJAX Call to Find Buddies based on activity 
     $(document).on("click", ".fa-user-check", function () {
         let actId = $(this).attr("id");
         let queryString = "/api/findbuddies/" + actId + "/" + userArr[0].uid;
@@ -251,31 +236,22 @@ $(function () {
         });
     });
 
-    //----------search button function -----------//
-
+    //----------AJAX Call for search button 
     let handleSearchAct = function (event) {
         event.preventDefault()
         let searchForWords = $("#searchInput").val().trim().split(" ").toString();
         console.log(searchForWords)
         let queryString = "/api/search/" + searchForWords;
-    
-          $.ajax({
+
+        $.ajax({
             url: queryString,
             method: "GET"
-           
-          }).then(function (data) {
+
+        }).then(function (data) {
             if (data) {
-              myResultList(data);
+                myResultList(data);
             }
-          });
-        };
-      $("#search-activity-btn").on("click", handleSearchAct);
+        });
+    };
+    $("#search-activity-btn").on("click", handleSearchAct);
 })
-
-
-
-
-
-
-
-
