@@ -319,7 +319,7 @@ li#search-li {
 
 /* user left profile list */
 #user-profile-list {
-    position: fixed;
+    position: absolute;
     /* margin-left: 90px;
     margin-top: 18%; */
     padding: 0%;
