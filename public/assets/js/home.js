@@ -116,12 +116,14 @@ $(function () {
     }
     // store current user in userArr
     getCurrentUser(auth).then(function (data) {
+        
         userArr.push({
             uid: data.uid,
             displayName: data.displayName,
             photoURL: data.photoURL
         });
         // call Functions used to display content
+        $("#myAvatar").attr("src", userArr[0].photoURL)
         handleMyListSearch(userArr[0].uid);
         handleUserSearch(userArr[0].uid);
         console.log(userArr);

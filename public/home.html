@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="eng">
-
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
   <meta name="description" content="">
@@ -34,7 +32,6 @@
   <!-- Custom styles for this template -->
   <link href="assets/css/home.css" rel="stylesheet">
 
-
 </head>
 
 <body id="page-top">
@@ -44,37 +41,36 @@
       <a class="navbar-brand js-scroll-trigger" href="home.html"><span id="red">B</span>U<span
           id="orange">C</span>K<span id="yellow">E</span>T <span id="green">B</span>U<span id="blue">D</span>D<span
           id="purple">Y</span></a>
+
+      <!-- Responsive Nav Bar Effect that toggles and shrinks into button with scroll down menu -->
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
         data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
         aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
       </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav text-uppercase ml-auto">
 
+      <!-- Uncollapsed Nav Bar -->
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+          <span class="budIcons"><a href="#" class="circleMe">
+              <img height="45" width="45" src="#" alt="Buddy Avatar" id="myAvatar"></a></span>
+        <ul class="navbar-nav text-uppercase ml-auto">
+          
           <li class="nav-item">
+            
             <a class="nav-link js-scroll-trigger" href="home.html">Trending</a>
           </li>
-          <!-- <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="profile.html"></a>
-            </li> -->
-            <li class="nav-item">
-                <span id="user"></span>
-                
-              </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="index.html">logout</a>
-            
           </li>
           <li class="nav-item" id="search-li">
             <form class="form-inline">
               <input class="form-control mr-sm-2" id="searchInput" type="search" placeholder="Search Activities"
                 aria-label="Search">
               <button class="btn btn-outline-light my-2 my-sm-0" id="search-activity-btn" type="submit">Search</button>
-
           </li>
         </ul>
+        
       </div>
     </div>
   </nav>
@@ -82,83 +78,82 @@
   <!-- Header with all catagories-->
   <header class="container masthead">
     <div class="row" id="masthead-cats">
-      <div class="col-md-2" id="rom-div">
+      <div class="col-md-2">
         <p class="cat-text" id="rom-txt">Romance</p>
       </div>
-      <div class="col-md-2" id="ent-div">
+      <div class="col-md-2">
         <p class="cat-text" id="ent-txt">Sports</p>
       </div>
-      <div class="col-md-1" id="edu-div">
+      <div class="col-md-1">
         <p class="cat-text" id="edu-txt">Education</p>
       </div>
-      <div class="col-md-2" id="adv-div">
+      <div class="col-md-2">
         <p class="cat-text" id="adv-txt">Adventure</p>
       </div>
-      <div class="col-md-1" id="tra-div">
+      <div class="col-md-1">
         <p class="cat-text" id="tra-txt">Travel</p>
       </div>
-      <div class="col-md-2" id="uni-div">
+      <div class="col-md-2">
         <p class="cat-text" id="uni-txt">Unique</p>
       </div>
-      <div class="col-md-2" id="all-div">
+      <div class="col-md-2">
         <p class="cat-text" id="all-txt">All</p>
       </div>
     </div>
   </header>
 
-  <!-- User Interface -->
-  <!-- <section class="page-section" id="user-main"> -->
+  <!-- User Interface Bootstrap Grid Method-->
   <div class="container">
     <div class="row">
       <div class="col-md-6 text-center float left">
-        <!-- MY BUCKETLIST and Scrollbar -->
+
+        <!-- MY BUCKETLIST Header -->
         <div class=" text-center" id="user-bucketlist">
+         
           <h2 id="bucklist-header" class="section-heading text-uppercase text-center"><span id="red">M</span>Y<span
               id="orange"> B</span>U<span id="yellow">C</span>K<span id="green">E</span><span id="blue">T</span> L<span
               id="purple">I</span>S<span id="red">T</span></h2>
-
         </div>
-        <img src="./assets/images/sideBucketnobackground.png" class="float-left" id="left-bucket">
+        <img src="./assets/images/sideBucketnobackgroundSmaller.png" class="float" id="left-bucket">
+
         <!-- Bucklist items with Scroll bar -->
-        <div class="rainbow" id="user-profile-list">
-        </div>
-      </div>
-      <!-- User Console and result lists from searches -->
-      <div class="col-md-6 text-center" id="user-console">
-        <!-- <h2 id="console-header" class="section-heading text-uppercase text-center"><span id="red">F</span>I<span
-              id="orange">L</span>L <span id="yellow"></span>M<span id="green">Y</span> B<span id="blue">U</span>C<span
-              id="purple">K</span>E<span id="red">T</span>!</h2> -->
-
+        <div class="rainbow" id="user-profile-list"></div>
         
-          <div class="row">
-            <div class="col-md-12" id="piechart">
-              <h2> Trending Activities</h2>
-              <canvas id="myChart" width="55" height="50"></canvas>
-            </div>
+      </div>
+
+      <!-- User Console / Result lists from searches /Trending Chart -->
+      <div class="col-md-6 text-center" id="user-console">
+        <div class="row">
+
+          <!-- Chart Kick Pie Chart Trending Activities -->
+          <div class="col-md-12" id="piechart">
+            <h2 id="console-header" class="section-heading text-uppercase text-center"><span id="red">T</span>r<span
+                id="orange">e</span>n<span id="yellow">d</span>i<span id="green">n</span>g<span id="blue">
+                A</span>c<span id="purple">t</span>i<span id="red">v</span>i<span id="orange">e</span>s</h2>
+            <canvas id="myChart" width="55" height="50"></canvas>
           </div>
         </div>
-     
+      </div>
     </div>
-    <!-- ROW OF BUDDIES  -->
-    <img src="./assets/images/headerpaintPNG.png" id="buddy-row-paint">
-    <!-- </section> -->
 
+    <!-- ROW OF BUDDIES  -->
+    <img src="./assets/images/headerpaintPNGSmaller.png" id="buddy-row-paint">
     <div class="col-lg-12" id="avatar-icon-row"></div>
 
-
-
+    <!-------------------- SCRIPTS ------------------------>
+    <!-- Firebase products to use -->
     <script src="./assets/js/chartkick.js"></script>
 
-
-
-    <!-- Add Firebase products that you want to use -->
+    <!-- Firebase products to use -->
     <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-firestore.js"></script>
 
+    <!-- Custom JS files -->
     <script src="./assets/js/firebase.js"></script>
     <script src="assets/js/home.js"></script>
 
+    <!-- AJAX CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
