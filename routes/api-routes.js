@@ -98,19 +98,17 @@ module.exports = function(app) {
       resExpress.json(data);
     });
   });
-
+// =============function for searching activities by words=============//
   app.get("/api/search/:searchTerms", function (req, res) {
-  
     let searchParam = req.params.searchTerms
+    // split search paramater back into separate words
     searchParam = searchParam.split(",")
-    
-    console.log(searchParam)
     let queryString= `SELECT * FROM activities WHERE activity LIKE "%${searchParam[0]}%"`;
   
     for(let i = 1; i < searchParam.length; i++){
+      // build query string to include a LIKE search for each word
       queryString += ` OR title LIKE "%${searchParam[i]}%"`
     }
-    console.log(queryString);
     connection.query(queryString, function (err, data) {
       if (err) {
         return res.status(500).end();

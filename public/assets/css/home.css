@@ -1,4 +1,4 @@
-/* Bucket logo colors */
+/* colorization for key words*/
 #red {
     color: red;
 }
@@ -8,7 +8,7 @@
 }
 
 #yellow {
-    color: yellow;
+    color: rgb(171, 173, 28);
 }
 
 #green {
@@ -23,30 +23,59 @@
     color: purple;
 }
 
-
+/* ----------------MAIN GENERAL STYLING------------ */
 body {
-    background-image: url(../images/backgroundImage.jpeg);
+    background-image: url(../images/backgroundImageSmaller.jpeg);
     background-size: 100%;
-
     background-repeat: no-repeat;
-    /* overflow-x: hidden; */
     font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-
 }
 
+p {
+    color: black;
+    font-weight: 800;
+    font-size: 180%;
+    font-family: 'dancing script';
+}
+
+a:hover {
+    color: #fec503;
+}
+
+
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/* --------------------- HEADER ------------------------*/
+
 header {
-    background-image: url(../images/rowofpaint.jpeg);
+    background-image: url(../images/rowofpaintSmaller.jpeg);
     background-repeat: no-repeat;
     margin-top: 0%;
     padding-top: 3%;
     border: solid;
     width: 100%;
-    /* height: 50%; */
 }
 
-li#search-li {
-    margin-top: 8px;
+header.masthead {
+    text-align: center;
+    color: #212529;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    height: 210px;
+    margin-top: 0%;
 }
+
+/* ----------------------NAV BAR ----------------------*/
 
 #mainNav {
     background-color: #212529;
@@ -91,55 +120,11 @@ li#search-li {
     color: #fed136;
 }
 
+li#search-li {
+    margin-top: 8px;
+}
 .form-inline {
     margin-bottom: 2%;
-}
-
-p {
-    /* line-height: 1.75; */
-    /* background-color: #212529; */
-    color: black;
-    font-weight: 800;
-    font-size: 180%;
-    font-family: 'dancing script';
-}
-
-
-
-a {
-    color: #fed136;
-}
-
-a:hover {
-    color: #fec503;
-}
-
-.text-primary {
-    color: #fed136 !important;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: 700;
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-}
-
-.page-section {
-    padding: 5px 0;
-    float: left;
-}
-
-.page-section h3.section-subheading {
-    font-size: 16px;
-    font-weight: 400;
-    font-style: italic;
-    margin-bottom: 75px;
-    text-transform: none;
-    font-family: 'Droid Serif', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 #piechart {
@@ -228,21 +213,8 @@ h6 {
     }
 }
 
-header.masthead {
-    text-align: center;
-    color: #212529;
-    background-attachment: scroll;
-    background-position: center center;
-    background-size: cover;
-    position: relative;
-    height: 210px;
-    margin-top: 0%;
-}
-
-
 .catagory-text {
     position: absolute;
-
 }
 
 .col-md-2 {
@@ -310,7 +282,7 @@ header.masthead {
     font-weight: 900;
     padding: 13px;
 }
-
+/* 
 @media (min-width: 768px) {
     header.masthead .intro-text {
         padding-top: 10px;
@@ -331,14 +303,14 @@ header.masthead {
         line-height: 75px;
         font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
     }
-}
+} */
 
 #left-bucket {
     max-width: 100%;
     position: relative;
     height: auto;
-    margin-left: -8%;
-    margin-top: -8%;
+    /* margin-left: -8%;
+    margin-top: -8%; */
 }
 
 .list-group-item {
@@ -347,9 +319,9 @@ header.masthead {
 
 /* user left profile list */
 #user-profile-list {
-    position: absolute;
-    margin-left: 90px;
-    margin-top: 18%;
+    position: fixed;
+    /* margin-left: 90px;
+    margin-top: 18%; */
     padding: 0%;
     overflow: scroll;
     width: 280px;
@@ -359,8 +331,7 @@ header.masthead {
     border-width: 10px;
     padding-left: 13px;
     padding-right: 10px;
-    text-align: left;
-    
+    text-align: left; 
 }
 
 #bltxtid {
@@ -371,7 +342,7 @@ header.masthead {
 
 /* User Console */
 #user-console {
-    background-image: url(../images/consoleBackground.jpeg);
+    background-image: url(../images/consoleBackgroundSmaller.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     border: solid;
@@ -565,8 +536,8 @@ p.circle-text {
 
 .rainbow {
 
-    display: block;
-    margin: 50px auto;
+    /* display: block;
+    margin: 50px auto; */
     color: white;
     font-family: inherit;
     /* text-shadow: 0 0 3px black; */
