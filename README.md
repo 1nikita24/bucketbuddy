@@ -70,6 +70,27 @@ Sharing life experiences with people with similiar interests.
 * /api/deletemylist/:id - deletes an activity from a users bucket
 * /api/countactivities - counts by activity category (used by chartkick)
 
+## AJAX Call for search button
+```js
+//----------AJAX Call for search button 
+    let handleSearchAct = function (event) {
+        event.preventDefault()
+        let searchForWords = $("#searchInput").val().trim().split(" ").toString();
+        console.log(searchForWords)
+        let queryString = "/api/search/" + searchForWords;
+
+        $.ajax({
+            url: queryString,
+            method: "GET"
+        }).then(function (data) {
+            if (data) {
+                myResultList(data);
+            }
+        });
+    };
+    $("#search-activity-btn").on("click", handleSearchAct);
+```
+
 ## Installation
 - npm i (to install above mentioned npm packages)
 - Create the database manullay by running the db/schema.sql file in mySQL

@@ -100,7 +100,7 @@ $(function () {
             myResultList(data)
         });
     }
-
+    //-----------FIREBASE AUTH FUNCTION
     //-----------------------function to get the current user from firebase and store in variable-------------//
     function getCurrentUser(auth) {
         return new Promise((resolve, reject) => {
@@ -246,7 +246,6 @@ $(function () {
         $.ajax({
             url: queryString,
             method: "GET"
-
         }).then(function (data) {
             if (data) {
                 myResultList(data);
