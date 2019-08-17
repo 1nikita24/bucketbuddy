@@ -51,6 +51,11 @@ var bucklistQueries = {
       cb(res);
     });
   },
+  insertUser: function(cols, vals, cb) {
+    orm.insertUser("userProfiles", cols, vals, function(res) {
+      cb(res);
+    });
+  },
   deleteMyList: function(condition, cb) {
     orm.deleteMyList("bucketLists", condition, function(res) {
       cb(res);
