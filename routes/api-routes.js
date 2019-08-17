@@ -79,6 +79,17 @@ module.exports = function(app) {
     );
   });
 
+  app.put("/api/insertuser", function(req, resExpress) {
+    bucklistQueries.insertUser(
+      ["name", "email", "photoUrl", "uid"],
+      [req.body.name, req.body.email, req.body.photourl, req.body.uid],
+      function(result) {
+        // Send back the ID of the new bucketlist item
+        resExpress.json({ id: result.insertId });
+      }
+    );
+  });
+
   app.delete("/api/deletemylist/:id", function(req, res) {
     var condition = "id = " + req.params.id;
 
@@ -98,23 +109,24 @@ module.exports = function(app) {
       resExpress.json(data);
     });
   });
-// =============function for searching activities by words=============//
-  app.get("/api/search/:searchTerms", function (req, res) {
-    let searchParam = req.params.searchTerms
+  // =============function for searching activities by words=============//
+  app.get("/api/search/:searchTerms", function(req, res) {
+    let searchParam = req.params.searchTerms;
     // split search paramater back into separate words
-    searchParam = searchParam.split(",")
-    let queryString= `SELECT * FROM activities WHERE activity LIKE "%${searchParam[0]}%"`;
-  
-    for(let i = 1; i < searchParam.length; i++){
+    searchParam = searchParam.split(",");
+    let queryString = `SELECT * FROM activities WHERE activity LIKE "%${
+      searchParam[0]
+    }%"`;
+
+    for (let i = 1; i < searchParam.length; i++) {
       // build query string to include a LIKE search for each word
-      queryString += ` OR title LIKE "%${searchParam[i]}%"`
+      queryString += ` OR title LIKE "%${searchParam[i]}%"`;
     }
-    connection.query(queryString, function (err, data) {
+    connection.query(queryString, function(err, data) {
       if (err) {
         return res.status(500).end();
       }
       return res.json(data);
-    })
+    });
   });
-
 };
