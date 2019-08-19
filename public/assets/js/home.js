@@ -85,9 +85,31 @@ $(function () {
             url: queryString,
             method: "GET"
         }).then(function (data) {
-            userDBid = data[0].id;
+            if(data) { 
+                userDBid = data[0].id;
+            } else {
+
+            }
         });
     }
+
+    //-----------------AJAX Call to insert User
+    let handleInsertUser = function (uid) {
+        let queryString = "/api/insertUser/" + uid;
+        $.ajax({
+            url: "/api/insertUser/",
+            data: {
+                name: userArr.displayName,
+                email: userArr.email,
+                uid: userArr.uid,
+                photoURL: userArr.photoURL
+            },
+            method: "POST"
+        }).then(function (data) {
+            console.log(data);
+        });
+    }
+    
 
     //-----------------AJAX Call to get results from search bar
     let handleCatSearch = function (catID) {
