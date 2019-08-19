@@ -131,6 +131,27 @@ var orm = {
       cb(result);
     });
   },
+  insertUser: function(table, cols, vals, cb) {
+    var queryString = "INSERT INTO " + table;
+
+    queryString += " (";
+    queryString += cols.toString();
+    queryString += ") ";
+    queryString += "VALUES (";
+    queryString += printQuestionMarks(vals.length);
+    queryString += ") ";
+
+    // console.log(queryString);
+
+    connection.query(queryString, vals, function(err, result) {
+      if (err) {
+        throw err;
+      }
+
+      cb(result);
+    });
+  },
+
   deleteMyList: function(table, condition, cb) {
     var queryString = "DELETE FROM " + table;
     queryString += " WHERE ";
@@ -145,16 +166,15 @@ var orm = {
     });
   },
   countActivities: function(cb) {
-    var queryString = "SELECT activities.activity, count(activityId) AS ActCount"; 
+    var queryString =
+      "SELECT activities.activity, count(activityId) AS ActCount";
     queryString += " FROM bucketLists";
-    queryString += " INNER JOIN activities ON bucketLists.activityId = activities.id";
+    queryString +=
+      " INNER JOIN activities ON bucketLists.activityId = activities.id";
     queryString += " GROUP BY activityId";
     queryString += " ORDER BY ActCount DESC";
 
-    connection.query(queryString, function(
-      err,
-      result
-    ) {
+    connection.query(queryString, function(err, result) {
       if (err) throw err;
       // console.log("Number of activities = " + result);
       cb(result);

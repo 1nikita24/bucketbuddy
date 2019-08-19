@@ -6,6 +6,7 @@ Bucket Buddy is an interactive site that enables a user to create a list of all 
 - [Heroku](https://still-depths-21016.herokuapp.com)
 - [Trello](https://trello.com/b/qYK8dkQY/bucketbuddy)
 - [Prezi](https://prezi.com/p/pmdfdeyiy7e2/bucketbuddy-presentation/)
+- [Demo steps - google docs](https://docs.google.com/document/d/1hDUP1nGaRQZGzOm8u4nzamz1IQfF6kZ0r1GTxff1emE/edit#)
 
 ## Motivation - **The Why**
 Setting up a way to experience unique and once in a life time experiences with others
