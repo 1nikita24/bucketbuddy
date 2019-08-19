@@ -88,7 +88,8 @@ $(function () {
             if(data) { 
                 userDBid = data[0].id;
             } else {
-
+handleInsertUser();
+handleUserSearch();
             }
         });
     }
