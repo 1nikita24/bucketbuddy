@@ -85,32 +85,37 @@ $(function () {
             url: queryString,
             method: "GET"
         }).then(function (data) {
-            if(data) { 
-                userDBid = data[0].id;
+            console.log(data.length)
+            if (data.length === 0 ) {
+                handleInsertUser();
+                console.log("need to insert")
+                handleUserSearch(userArr[0].uid);
+               
             } else {
-handleInsertUser();
-handleUserSearch();
+                console.log("found user");
+                console.log(data);
+                userDBid = data[0].id;
             }
         });
     }
 
     //-----------------AJAX Call to insert User
-    let handleInsertUser = function (uid) {
-        let queryString = "/api/insertUser/" + uid;
+    let handleInsertUser = function () {;
         $.ajax({
             url: "/api/insertUser/",
             data: {
-                name: userArr.displayName,
-                email: userArr.email,
-                uid: userArr.uid,
-                photoURL: userArr.photoURL
+                name: userArr[0].displayName,
+                email: userArr[0].email,
+                uid: userArr[0].uid,
+                photourl: userArr[0].photoURL
             },
-            method: "POST"
+            method: "PUT"
         }).then(function (data) {
             console.log(data);
+            userDBid = data[0].id;
         });
     }
-    
+
 
     //-----------------AJAX Call to get results from search bar
     let handleCatSearch = function (catID) {
@@ -138,7 +143,8 @@ handleUserSearch();
         userArr.push({
             uid: data.uid,
             displayName: data.displayName,
-            photoURL: data.photoURL
+            photoURL: data.photoURL,
+            email: data.email
         });
         // call Functions used to display content
         $("#myAvatar").attr("src", userArr[0].photoURL)
