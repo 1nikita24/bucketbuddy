@@ -52,10 +52,10 @@ $(function () {
         for (let i = 0; i < 6; i++) {
             if (data[i]) {
                 $buddyIconRow.append(`
-            <span class="budIcons"><a href="mailto:${data[i].email}?Subject=Hey%20Buddy%20Let's%20${data[i].activity}" class="circle" id="cir${i}">
+            <span class="budIcons" title="${data[i].name}"><a href="mailto:${data[i].email}?Subject=Hey%20Buddy%20Let's%20${data[i].activity}" class="circle" id="cir${i}">
             <img height="63" width="63"
              src="${data[i].photoUrl}" alt="Buddy Avatar"></a></span>
-             <p>${data[i].name}</p>`)
+             `)
             } else {
                 $buddyIconRow.append(`
             <span class="budIcons"><a href=#add-Buddy class="circle" id="cir${i}">
