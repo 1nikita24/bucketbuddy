@@ -58,7 +58,7 @@ $(function () {
              `)
             } else {
                 $buddyIconRow.append(`
-            <span class="budIcons"><a href=#add-Buddy class="circle" id="cir${i}">
+            <span title="no other buddy :(" class="budIcons"><a href=#add-Buddy class="circle" id="cir${i}">
             <img height="63" width="63"
              src="https://previews.123rf.com/images/blankstock/blankstock1402/blankstock140202174/25833750-no-user-sign-icon-do-not-enter-person-symbol-human-avatar-red-prohibition-sign-stop-symbol-.jpg" alt="The Dude"></a></span>`)
             }
