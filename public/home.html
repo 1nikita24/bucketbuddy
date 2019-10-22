@@ -73,28 +73,28 @@
   </nav>
 
   <!-- Header with all catagories-->
-  <header class="container masthead">
+  <header class="navbar-nav masthead d-sm-none d-md-block">
     <div class="row" id="masthead-cats">
-      <div class="col-md-2">
-        <p class="cat-text" id="rom-txt">Romance</p>
+      <div class="col-md-2 ">
+        <a href="#user-console-href"><p class="cat-text" id="rom-txt">Romance</p></a>
       </div>
       <div class="col-md-2">
-        <p class="cat-text" id="ent-txt">Sports</p>
+        <a href="#user-console-href"><p class="cat-text" id="ent-txt">Sports</p></a>
       </div>
       <div class="col-md-1">
-        <p class="cat-text" id="edu-txt">Education</p>
+        <a href="#user-console"><p class="cat-text" id="edu-txt">Education</p></a>
       </div>
       <div class="col-md-2">
-        <p class="cat-text" id="adv-txt">Adventure</p>
+        <a href="#user-console-href"><p class="cat-text" id="adv-txt">Adventure</p></a>
       </div>
       <div class="col-md-1">
-        <p class="cat-text" id="tra-txt">Travel</p>
+        <a href="#user-console-href"><p class="cat-text" id="tra-txt">Travel</p></a>
       </div>
       <div class="col-md-2">
-        <p class="cat-text" id="uni-txt">Unique</p>
+        <a href="#user-console-href"><p class="cat-text" id="uni-txt">Unique</p></a>
       </div>
       <div class="col-md-2">
-        <p class="cat-text" id="all-txt">All</p>
+        <a href="#user-console-href"><p class="cat-text" id="all-txt">All</p></a>
       </div>
     </div>
   </header>
@@ -102,7 +102,7 @@
   <!-- User Interface Bootstrap Grid Method-->
   <div class="container">
     <div class="row">
-      <div class="col-md-6 text-center float left">
+      <div class="col-md-6 text-center float left" id="user-bucketlist-section">
 
         <!-- MY BUCKETLIST Header -->
         <div class=" text-center" id="user-bucketlist">
@@ -110,14 +110,16 @@
               id="orange"> B</span>U<span id="yellow">C</span>K<span id="green">E</span><span id="blue">T</span> L<span
               id="purple">I</span>S<span id="red">T</span></h2>
         </div>
-        <img src="./assets/images/sideBucketnobackgroundSmaller.png" class="float" id="left-bucket">
+        <img src="./assets/images/sideBucketnobackgroundSmaller.png" class="" id="left-bucket">
 
         <!-- Bucklist items with Scroll bar - dynamically rendered -->
         <div class="rainbow" id="user-profile-list"></div>
       </div>
-
+<div id="user-console-href"></div>
       <!-- User Console / Result lists from searches /Trending Chart -->
+      
       <div class="col-md-6 text-center" id="user-console">
+          
         <div class="row">
 
           <!-- Chart Kick Pie Chart Trending Activities - dynamically rendered-->

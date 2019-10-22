@@ -24,8 +24,8 @@ $(function () {
         for (let i = 0; i < activities.length; i++) {
             let activity = activities[i];
             $bucketProContainer.append(`
-            <p class="bltxt" data-type="activity" id="bltxtid"><i class="fas fa-user-check" id="${activity.activityId}"></i>
-            <i class="fas fa-trash-alt ml-2" id="${activity.bucketListsId}"></i>  ${activity.activity}
+            <p class="bltxt" data-type="activity" id="bltxtid"><i class="fas fa-user-check" id="${activity.activityId}" title="Click to see other buddies below"></i>
+            <i class="fas fa-trash-alt ml-2" id="${activity.bucketListsId}" title="Delete activity"></i>  ${activity.activity}
             </p>`)
         }
     }
@@ -36,7 +36,7 @@ $(function () {
         $userConsole.empty();
         $userConsole.append(`<h2 class="section-heading text-uppercase text-center" id="console-header"><span id="red">S</span>E<span
         id="orange">L</span>E<span id="yellow">C</span>T<span id="green"> I</span>T<span id="blue">E</span>M<span
-        id="purple">!</span></h2>`)
+        id="purple">!</span> or scroll back up to catagories</h2> `)
         for (let i = 0; i < data.length; i++) {
             $userConsole.append(`
             <p class="" data-type="activity"><i class="fa fa-plus ml-2" id="${data[i].id}"></i> ${data[i].activity}

@@ -245,7 +245,7 @@ header.masthead {
     margin-right: 0px;
     padding-left: 0px;
     padding-right: 0px;
-    font-size: 175%;
+    font-size: 35px;
 }
 
 .cat-text {
@@ -259,7 +259,8 @@ header.masthead {
 }
 
 .cat-text:hover {
-    cursor: pointer;
+    /* cursor: pointer; */
+    cursor: url('../images/paint-bucket-png-13-transparent-smaller85px.png'), auto;
 }
 
 /* -----------Kick Chart------- */
@@ -520,25 +521,83 @@ a.circle {
 }
 
 
-/* 
-@media (min-width: 768px) {
-    header.masthead .intro-text {
-        padding-top: 10px;
-        padding-bottom: 10px;
+
+@media (max-width: 995px) {
+    /* #masthead-cats {
+        size: 
+    } */
+    .cat-text {
+        padding: 18px;
+    }
+    #all-txt {
+        font-size: 35px;
+        margin-left: -7px;
     }
 
-    header.masthead .intro-text .intro-lead-in {
-        font-size: 40px;
-        font-style: italic;
-        line-height: 40px;
-        margin-bottom: 25px;
-        font-family: 'Droid Serif', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    #rom-txt {
+        
+        padding-left: 16px;
+        
     }
 
-    header.masthead .intro-text .intro-heading {
-        font-size: 75px;
-        font-weight: 700;
-        line-height: 75px;
-        font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    #edu-txt {
+        padding-left: 4px;
     }
-}  */
+    
+
+    #left-bucket {
+        position: relative;
+        margin-left: -70px;
+
+    }
+
+    #user-bucketlist-section {
+        margin-left: 258px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    #user-console {
+        margin-left: 250px;
+        position: relative;
+        margin-top: 105px;
+    }
+
+    #user-profile-list {
+        position: relative;
+        margin-top: -410px;
+        margin-left: 78px;
+    }
+
+    #user-console-href {
+        margin-top: 540px;
+    }
+
+    #buddy-row-paint {
+        height: 215px;
+        
+    }
+
+    #cir0 {
+        margin-right: 5%;
+        margin-left: -13px;
+    }
+
+    #cir2 {
+        margin-right: 32px;
+        margin-left: 63px;
+    }
+
+    #cir3 {
+        margin-left: 51px;
+    }
+
+    #cir4 {
+        margin-left: 66px;
+    }
+
+    #cir5 {
+        margin-left: 61px;
+    }
+
+}
