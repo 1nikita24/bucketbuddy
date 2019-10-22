@@ -258,6 +258,10 @@ header.masthead {
     padding: 0px;
 }
 
+.cat-text:hover {
+    cursor: pointer;
+}
+
 /* -----------Kick Chart------- */
 #piechart {
     padding-top: 0%;
@@ -354,6 +358,14 @@ header.masthead {
     font-family: 'dancing script';
     font-size: 144%;
     opacity: 1.0;
+}
+
+.fa-trash-alt:hover {
+    cursor: pointer;
+}
+
+.fa-user-check:hover {
+    cursor: copy;
 }
 
 /* ---------------User Console------------- */
