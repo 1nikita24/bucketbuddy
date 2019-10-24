@@ -324,7 +324,7 @@ header.masthead {
     text-align: center;
     padding-top: 6px;
     margin-bottom: -10%;
-    font-size: 45px;
+    font-size: 40px;
     border: solid;
     border-color: black;
     background-color: white;
@@ -393,13 +393,19 @@ header.masthead {
 }
 
 /*---------------- Buddies icon Row and Avatar setings --------------*/
-#buddy-row-paint {
+/* #buddy-row-paint {
     height: 270px;
     overflow-y: auto;
     position: relative;
     margin-left: 0px;
     margin-top: 4%;
+} */
+#buddy-row-paint {
+    max-width: 100%;
+    height: auto;
+    margin-top: 7%;
 }
+
 
 .circle {
     line-height: 0;
@@ -457,24 +463,24 @@ a.circle {
 }
 
 #cir1 {
-    margin-left: 5%;
+    margin-left: 2%;
 }
 
 #cir2 {
-    margin-right: 32px;
+    margin-right: 91px;
     margin-left: 100px;
 }
 
 #cir3 {
-    margin-left: 90px;
+    margin-left: 11px;
 }
 
 #cir4 {
-    margin-left: 100px;
+    margin-left: 87px;
 }
 
 #cir5 {
-    margin-left: 100px;
+    margin-left: 84px;
 }
 
 .col {
@@ -523,9 +529,37 @@ a.circle {
     animation: bg-scroll 10s infinite linear;
 }
 
+@media (max-width:1200px) {
+    #avatar-icon-row {
+        margin-left: 38px;
+    }
 
+#cir1 {
+    margin-left: 1%;
+}
 
-@media (max-width: 995px) {
+#cir2 {
+   
+    margin-left: 60px;
+    margin-right: 20px;
+}
+
+#cir3 {
+    margin-left: 55px;
+    
+}
+
+#cir4 {
+    margin-left: 60px;
+}
+
+#cir5 {
+    margin-left: 57px;
+}
+
+}
+
+@media (max-width: 992px) {
     /* #masthead-cats {
         size: 
     } */
@@ -550,11 +584,16 @@ a.circle {
 
     #left-bucket {
         position: relative;
-        margin-left: -51px;
+        margin-left: -14%;
         margin-top: -7px;
 
     }
-
+    #bucklist-header {
+        padding: 3% 14% 0% 14%;
+        width: max-content;
+        display: inline-block;
+        margin-left: -7%;
+    }
     #user-bucketlist-section {
         margin-left: 258px;
         text-align: center;
@@ -562,15 +601,16 @@ a.circle {
     }
 
     #user-console {
-        margin-left: 250px;
+        margin-left: 24%;
         position: relative;
         margin-top: 105px;
+        min-width: 515px;
     }
 
     #user-profile-list {
         position: relative;
         margin-top: -410px;
-        margin-left: 93px;
+        margin-left: 18%;
     }
 
     #user-console-href {
@@ -578,13 +618,20 @@ a.circle {
     }
 
     #buddy-row-paint {
-        height: 215px;
+        /* height: 215px; */
+        /* margin-left: -18%; */
+        max-width: 100%;
+        height: auto;
+        
         
     }
 
     #cir0 {
         margin-right: 5%;
-        margin-left: -13px;
+        margin-left: 3px;
+    }
+    #cir1 {
+        margin-left: 4%;
     }
 
     #cir2 {
@@ -597,11 +644,31 @@ a.circle {
     }
 
     #cir4 {
-        margin-left: 66px;
+        margin-left: 49px;
     }
 
     #cir5 {
         margin-left: 61px;
     }
 
+    .cat-text {
+        margin-top: 82px;
+      
+    }
+
+}
+
+@media screen and (min-width:1200px) {
+    #left-bucket { 
+        /* position: relative; */
+        margin-left: -48%;
+        margin-top: 8px;
+    }
+
+    #user-profile-list {
+        margin-left: 140px;
+
+    }
+
+   
 }
