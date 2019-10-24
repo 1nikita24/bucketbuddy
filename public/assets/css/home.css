@@ -265,12 +265,13 @@ header.masthead {
 
 /* -----------Kick Chart------- */
 #piechart {
-    padding-top: 0%;
-    background-color: white;
+    padding-top: 1%;
+    background-image: url('https://res.cloudinary.com/delacue/image/upload/v1571960120/white-brick-wall-console_bajs09.jpg');
+background-size: cover;
 }
 
 #myChart {
-    background-color: #fff;
+    background-color: transparent;
 }
 
 ::-moz-selection {
@@ -327,7 +328,9 @@ header.masthead {
     font-size: 40px;
     border: solid;
     border-color: black;
-    background-color: white;
+    background-image: url('https://res.cloudinary.com/delacue/image/upload/v1571960120/white-brick-wall-console_bajs09.jpg');
+background-size: 100%;
+
 }
 
 #left-bucket {
@@ -376,16 +379,16 @@ header.masthead {
 #console-header {
     padding-top: 7px;
     /* padding-bottom: 0.5%; */
-    background-color: white;
+    /* background-color: white; */
 }
 
 #user-console {
-    background-image: url(../images/canMixSmaller.jpeg);
+    background-image: url('https://res.cloudinary.com/delacue/image/upload/v1571960120/white-brick-wall-console_bajs09.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     border: solid;
     margin-top: 55px;
-    background-color: white;
+    /* background-color: white; */
     overflow: auto;
     height: 550px;
     /* height: 500px; */

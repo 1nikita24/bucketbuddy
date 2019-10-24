@@ -36,7 +36,7 @@ $(function () {
         $userConsole.empty();
         $userConsole.append(`<h2 class="section-heading text-uppercase text-center" id="console-header"><span id="red">S</span>E<span
         id="orange">L</span>E<span id="yellow">C</span>T<span id="green"> I</span>T<span id="blue">E</span>M<span
-        id="purple">!</span> or scroll back up to catagories</h2> `)
+        id="purple">!</span></h2> `)
         for (let i = 0; i < data.length; i++) {
             $userConsole.append(`
             <p class="" data-type="activity"><i class="fa fa-plus ml-2" id="${data[i].id}"></i> ${data[i].activity}
