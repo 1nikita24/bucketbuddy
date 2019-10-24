@@ -384,11 +384,11 @@ header.masthead {
     background-size: cover;
     background-repeat: no-repeat;
     border: solid;
-    margin-top: 4%;
+    margin-top: 55px;
     background-color: white;
     overflow: auto;
-    /* height: 550px; */
-    height: 500px;
+    height: 550px;
+    /* height: 500px; */
     width: auto;
 }
 
