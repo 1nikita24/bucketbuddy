@@ -25,9 +25,9 @@
 
 /* ----------------MAIN GENERAL STYLING------------ */
 body {
-    background-image: url(../images/backgroundImageSmaller.jpeg);
+    background-image: url('https://res.cloudinary.com/delacue/image/upload/v1571936063/Grafitti-wall-paint_oya5vz.jpg');
     background-size: 100%;
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
@@ -249,7 +249,7 @@ header.masthead {
 }
 
 .cat-text {
-    margin-top: 84px;
+    margin-top: 94px;
     font-weight: 900;
     padding: 13px;
 }
@@ -322,9 +322,12 @@ header.masthead {
     margin-top: 10%;
     text-align: justify;
     text-align: center;
-    padding-right: 49px;
+    padding-top: 6px;
     margin-bottom: -10%;
     font-size: 45px;
+    border: solid;
+    border-color: black;
+    background-color: white;
 }
 
 #left-bucket {
@@ -332,15 +335,15 @@ header.masthead {
     max-width: 550px;
     position: absolute;
     height: auto;
-    margin-left: -56%;
-    margin-top: -5%;
+    margin-left: -58%;
+    /* margin-top: -5%; */
 }
 
 #user-profile-list {
     position: absolute;
     opacity: 0.9;
-    margin-left: 98px;
-    margin-top: 23%;
+    margin-left: 91px;
+    margin-top: 32%;
     padding: 0%;
     overflow: scroll;
     width: 280px;
@@ -547,7 +550,8 @@ a.circle {
 
     #left-bucket {
         position: relative;
-        margin-left: -70px;
+        margin-left: -51px;
+        margin-top: -7px;
 
     }
 
@@ -566,7 +570,7 @@ a.circle {
     #user-profile-list {
         position: relative;
         margin-top: -410px;
-        margin-left: 78px;
+        margin-left: 93px;
     }
 
     #user-console-href {
