@@ -267,7 +267,7 @@ header.masthead {
 #piechart {
     padding-top: 1%;
     background-image: url('https://res.cloudinary.com/delacue/image/upload/v1571960120/white-brick-wall-console_bajs09.jpg');
-background-size: cover;
+    background-size: cover;
 }
 
 #myChart {
@@ -329,7 +329,7 @@ background-size: cover;
     border: solid;
     border-color: black;
     background-image: url('https://res.cloudinary.com/delacue/image/upload/v1571960120/white-brick-wall-console_bajs09.jpg');
-background-size: 100%;
+    background-size: 100%;
 
 }
 
@@ -470,8 +470,8 @@ a.circle {
 }
 
 #cir2 {
-    margin-right: 91px;
-    margin-left: 100px;
+    margin-right: 94px;
+    margin-left: 91px;
 }
 
 #cir3 {
@@ -537,53 +537,55 @@ a.circle {
         margin-left: 38px;
     }
 
-#cir1 {
-    margin-left: 1%;
-}
+    #cir1 {
+        margin-left: 1%;
+    }
 
-#cir2 {
-   
-    margin-left: 60px;
-    margin-right: 20px;
-}
+    #cir2 {
 
-#cir3 {
-    margin-left: 55px;
-    
-}
+        margin-left: 60px;
+        margin-right: 20px;
+    }
 
-#cir4 {
-    margin-left: 60px;
-}
+    #cir3 {
+        margin-left: 55px;
 
-#cir5 {
-    margin-left: 57px;
-}
+    }
+
+    #cir4 {
+        margin-left: 60px;
+    }
+
+    #cir5 {
+        margin-left: 57px;
+    }
 
 }
 
 @media (max-width: 995px) {
+
     /* #masthead-cats {
         size: 
     } */
     .cat-text {
         padding: 18px;
     }
+
     #all-txt {
         font-size: 35px;
         margin-left: -7px;
     }
 
     #rom-txt {
-        
+
         padding-left: 16px;
-        
+
     }
 
     #edu-txt {
         padding-left: 4px;
     }
-    
+
 
     #left-bucket {
         position: relative;
@@ -591,12 +593,14 @@ a.circle {
         margin-top: -7px;
 
     }
+
     #bucklist-header {
         padding: 3% 14% 0% 14%;
         width: max-content;
         display: inline-block;
         margin-left: -7%;
     }
+
     #user-bucketlist-section {
         margin-left: 258px;
         text-align: center;
@@ -625,14 +629,15 @@ a.circle {
         /* margin-left: -18%; */
         max-width: 100%;
         height: auto;
-        
-        
+
+
     }
 
     #cir0 {
         margin-right: 5%;
         margin-left: 3px;
     }
+
     #cir1 {
         margin-left: 4%;
     }
@@ -656,13 +661,13 @@ a.circle {
 
     .cat-text {
         margin-top: 82px;
-      
+
     }
 
 }
 
 @media screen and (min-width:1200px) {
-    #left-bucket { 
+    #left-bucket {
         /* position: relative; */
         margin-left: -48%;
         margin-top: 8px;
@@ -675,41 +680,45 @@ a.circle {
 }
 
 @media (max-width: 991px) {
+
     /* #masthead-cats {
         size: 
     } */
     .cat-text {
         padding: 18px;
     }
+
     #all-txt {
         font-size: 35px;
         margin-left: -7px;
     }
 
     #rom-txt {
-        
+
         padding-left: 16px;
-        
+
     }
 
     #edu-txt {
         padding-left: 4px;
     }
-    
+
 
     #left-bucket {
         position: relative;
         margin-left: -57%;
         margin-top: -7px;
-        
+
 
     }
+
     #bucklist-header {
         padding: 3% 14% 0% 14%;
         width: max-content;
         display: inline-block;
         margin-left: -46%;
     }
+
     #user-bucketlist-section {
         margin-left: 258px;
         text-align: center;
@@ -738,14 +747,15 @@ a.circle {
         /* margin-left: -18%; */
         max-width: 100%;
         height: auto;
-        
-        
+
+
     }
 
     #cir0 {
         margin-right: 5%;
         margin-left: -18px;
     }
+
     #cir1 {
         margin-left: 1%;
     }
@@ -771,17 +781,17 @@ a.circle {
         margin-left: 2px;
         margin-right: 2px;
     }
-    
+
     #ent-txt {
         margin-left: 0px;
-       
+
     }
-    
+
     #edu-txt {
         margin-left: -30px;
-       
+
     }
-    
+
     #adv-txt {
         /* margin-left: 5px;
         margin-right: 0px;
@@ -789,7 +799,7 @@ a.circle {
         padding-right: 0px;
         font-size: 175%; */
     }
-    
+
     #tra-txt {
         margin-left: 0px;
         margin-right: 0px;
@@ -797,21 +807,19 @@ a.circle {
         padding-right: 0px;
         font-size: 175%;
     }
-    
+
     #uni-txt {
         margin-left: 30px;
     }
-    
+
     #all-txt {
         margin-left: -20px;
-       
+
     }
-    
+
     .cat-text {
         margin-top: 91px;
         font-size: 20px !important;
     }
 
 }
-
-   
