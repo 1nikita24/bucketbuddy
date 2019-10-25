@@ -196,7 +196,7 @@ header.masthead {
 #rom-txt {
     margin-left: 0px;
     margin-right: 8px;
-    font-size: 175%;
+    /* font-size: 175%; */
     padding-left: 0px;
     padding-right: 0px;
 }
@@ -206,7 +206,7 @@ header.masthead {
     margin-right: 33px;
     padding-left: 0px;
     padding-right: 0px;
-    font-size: 175%;
+    /* font-size: 175%; */
 }
 
 #edu-txt {
@@ -214,7 +214,7 @@ header.masthead {
     margin-right: 0px;
     padding-left: 0px;
     padding-right: 0px;
-    font-size: 175%;
+    /* font-size: 175%; */
 }
 
 #adv-txt {
@@ -222,7 +222,7 @@ header.masthead {
     margin-right: 0px;
     padding-left: 0px;
     padding-right: 0px;
-    font-size: 175%;
+    /* font-size: 175%; */
 }
 
 #tra-txt {
@@ -230,7 +230,7 @@ header.masthead {
     margin-right: 0px;
     padding-left: 0px;
     padding-right: 0px;
-    font-size: 175%;
+    /* font-size: 175%; */
 }
 
 #uni-txt {
@@ -238,21 +238,22 @@ header.masthead {
     margin-right: 0px;
     padding-left: 0px;
     padding-right: 0px;
-    font-size: 175%;
+    /* font-size: 175%; */
 }
 
 #all-txt {
-    margin-left: 10px;
+    margin-left: -11px;
     margin-right: 0px;
     padding-left: 0px;
     padding-right: 0px;
-    font-size: 35px;
+    /* font-size: 35px; */
 }
 
 .cat-text {
     margin-top: 94px;
     font-weight: 900;
     padding: 13px;
+    font-size: 35px;
 }
 
 .col-md-2 {
@@ -379,8 +380,7 @@ header.masthead {
 /* ---------------User Console------------- */
 #console-header {
     padding-top: 7px;
-    /* padding-bottom: 0.5%; */
-    /* background-color: white; */
+    font-size: 40px;
 }
 
 #user-console {
@@ -561,19 +561,35 @@ a.circle {
         margin-left: 57px;
     }
 
+    #user-console {
+        margin-top: 45px;
+    }
+
+    .cat-text {
+        font-size: 27px;
+    }
+
 }
 
 @media (max-width: 995px) {
 
-    /* #masthead-cats {
-        size: 
-    } */
+    header.masthead {
+        text-align: center;
+        color: #212529;
+        background-attachment: scroll;
+        background-position: center center;
+        background-size: cover;
+        position: relative;
+        height: 208px;
+        margin-top: 0%;
+    }
     .cat-text {
         padding: 18px;
+        margin-top: 86px;
     }
 
     #all-txt {
-        font-size: 35px;
+        /* font-size: 35px; */
         margin-left: -7px;
     }
 
@@ -660,10 +676,6 @@ a.circle {
         margin-left: 61px;
     }
 
-    .cat-text {
-        margin-top: 82px;
-
-    }
 
 }
 
@@ -681,28 +693,65 @@ a.circle {
 }
 
 @media (max-width: 991px) {
-
-    /* #masthead-cats {
-        size: 
-    } */
-    .cat-text {
-        padding: 18px;
+    header.masthead {
+        text-align: center;
+        color: #212529;
+        background-attachment: scroll;
+        background-position: center center;
+        background-size: cover;
+        position: relative;
+        height: 208px;
+        margin-top: -3%;
     }
-
-    #all-txt {
-        font-size: 35px;
-        margin-left: -7px;
-    }
-
     #rom-txt {
-
+        margin-left: 2px;
+        margin-right: 2px;
         padding-left: 16px;
+    }
+
+    #ent-txt {
+        margin-left: 0px;
 
     }
 
     #edu-txt {
+        margin-left: -35px;
         padding-left: 4px;
+
     }
+
+    #adv-txt {
+        /* margin-left: 5px;
+        margin-right: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        font-size: 175%; */
+    }
+
+    #tra-txt {
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        /* font-size: 175%; */
+    }
+
+    #uni-txt {
+        margin-left: 45px;
+    }
+
+    #all-txt {
+        margin-left: -20px;
+       
+
+    }
+
+    .cat-text {
+        margin-top: 90px;
+        padding: 18px;
+        font-size: 24px ;
+    }
+
 
 
     #left-bucket {
@@ -778,49 +827,64 @@ a.circle {
         margin-left: 19px;
     }
 
-    #rom-txt {
-        margin-left: 2px;
-        margin-right: 2px;
-    }
+   
 
-    #ent-txt {
-        margin-left: 0px;
+}
 
-    }
-
-    #edu-txt {
-        margin-left: -30px;
+@media (max-width: 768px) {
+    #left-bucket {
+        max-width: 460px;
+        display: block;
+        margin-left: -48%;
+        margin-top: 1%;
 
     }
 
-    #adv-txt {
-        /* margin-left: 5px;
-        margin-right: 0px;
-        padding-left: 0px;
-        padding-right: 0px;
-        font-size: 175%; */
+    #user-profile-list {
+        width: 250px;
+        height: 250px;
+        font-size: 14px;
+        margin-top: -349px;
+        margin-left: -23%;
     }
 
-    #tra-txt {
-        margin-left: 0px;
-        margin-right: 0px;
-        padding-left: 0px;
-        padding-right: 0px;
-        font-size: 175%;
+    #bucklist-header {
+        display: block;
+        margin-top: 15%;
     }
 
-    #uni-txt {
-        margin-left: 30px;
+    #user-console {
+        display: block;
+        margin-left: 4%;
     }
 
-    #all-txt {
-        margin-left: -20px;
-
+    #buddy-row-paint {
+        /* height: 215px; */
+        margin-left: -11%;
+        max-width: 126%;
+        height: auto;
     }
 
-    .cat-text {
-        margin-top: 91px;
-        font-size: 20px !important;
+    #avatar-icon-row {
+        margin-left: -23px;
+        margin-top: -101px;
+        width: 126% ;
     }
 
+    #cir1 {
+        margin-left: 1px;
+    }
+    #cir2 {
+        margin-left: 14px;
+    }
+    #cir3 {
+        margin-left: 33px;
+    }
+
+    #cir4 {
+        margin-left: 13px;
+    }
+    #cir5 {
+        margin-left: 9px;
+    }
 }
