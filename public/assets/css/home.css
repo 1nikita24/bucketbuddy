@@ -537,6 +537,34 @@ a.circle {
     animation: bg-scroll 10s infinite linear;
 }
 
+@media (max-width: 1500px) {
+    .cat-text {
+        font-size: 39px;
+    }
+    #left-bucket {
+        margin-left: -58%;
+    }
+    #user-profile-list {
+        margin-left: 87px;
+    }
+    #bucklist-header {
+        margin-left: -112px;
+    }
+    #user-console {
+        margin-left: 60%;
+        margin-top: -4px;
+    }
+}
+#buddy-row-paint {
+    max-width: 116%;
+    height: auto;
+    margin-top: 6%;
+    margin-left: -8%;
+}
+
+}
+
+
 @media (max-width:1200px) {
     #avatar-icon-row {
         margin-left: 38px;
@@ -683,6 +711,23 @@ a.circle {
 
 }
 
+@media screen and (min-width:1330px)  {
+    header.masthead {
+        text-align: center;
+        color: #212529;
+        background-attachment: scroll;
+        background-position: center center;
+        background-size: cover;
+        position: relative;
+        height: 331px;
+        margin-top: -3%;
+    }
+
+    .cat-text {
+        margin-top: 156px;
+    }
+}
+
 @media screen and (min-width:1200px) {
     #left-bucket {
         /* position: relative; */
@@ -692,7 +737,6 @@ a.circle {
 
     #user-profile-list {
         margin-left: 140px;
-
     }
 }
 
@@ -704,7 +748,7 @@ a.circle {
         background-position: center center;
         background-size: cover;
         position: relative;
-        height: 208px;
+        height: 209px;
         margin-top: -3%;
     }
     #rom-txt {
@@ -908,3 +952,4 @@ a.circle {
         margin-left: 24px;
     }
 }
+
