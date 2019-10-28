@@ -53,13 +53,13 @@ $(function () {
             if (data[i]) {
                 $buddyIconRow.append(`
             <span class="budIcons" title="${data[i].name}"><a href="mailto:${data[i].email}?Subject=Hey%20Buddy%20Let's%20${data[i].activity}" class="circle" id="cir${i}">
-            <img height="63" width="63"
+            <img class="buddy-av-img"
              src="${data[i].photoUrl}" alt="Buddy Avatar"></a></span>
              `)
             } else {
                 $buddyIconRow.append(`
             <span title="no other buddy :(" class="budIcons"><a href=#add-Buddy class="circle" id="cir${i}">
-            <img height="63" width="63"
+            <img class="buddy-av-img"
              src="https://previews.123rf.com/images/blankstock/blankstock1402/blankstock140202174/25833750-no-user-sign-icon-do-not-enter-person-symbol-human-avatar-red-prohibition-sign-stop-symbol-.jpg" alt="The Dude"></a></span>`)
             }
         }

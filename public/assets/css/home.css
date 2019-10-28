@@ -132,6 +132,11 @@ li#search-li {
     }
 }
 
+.buddy-av-img {
+    height: 63px;
+    width: 63px;
+}
+
 .circleMe {
     line-height: 0;
     display: inline-block;
@@ -537,9 +542,41 @@ a.circle {
     animation: bg-scroll 10s infinite linear;
 }
 
+@media screen and (min-width: 1600px) {
+    .cat-text {
+        font-size: 63px !important;
+        margin-top: 104px !important;
+    }
+
+    #ent-txt {
+        margin-left: -70px;
+    }
+
+    #edu-txt {
+        margin-left: -60px;
+    }
+
+    #uni-txt {
+        margin-left: 122px;
+        margin-right: -18px;
+    }
+
+    header.masthead {
+        padding-bottom: 12%;
+        padding-top: 10%;
+
+    }
+
+    #bucklist-header {
+        font-size: 80px;
+        width: 174% !important;
+        margin-left: -74% !important;
+    }
+}
+
 @media (max-width: 1500px) {
     .cat-text {
-        font-size: 35px;
+        font-size: 34px;
     }
 
     #left-bucket {
@@ -567,6 +604,78 @@ a.circle {
     }
 }
 
+@media screen and (min-width:1330px) {
+    header.masthead {
+        text-align: center;
+        color: #212529;
+        background-attachment: scroll;
+        background-position: center center;
+        background-size: cover;
+        position: relative;
+        height: 331px;
+        margin-top: -3%;
+    }
+
+    #bucklist-header {
+        width: 95%;
+        margin-left: 20px;
+    }
+
+    .cat-text {
+        margin-top: 156px;
+        font-size: 35px;
+    }
+
+    #user-console {
+        margin-left: 54%;
+        margin-top: -4px;
+    }
+
+    #buddy-row-paint {
+        max-width: 111%;
+        height: auto;
+        margin-top: 6%;
+        margin-left: -2%;
+    }
+
+    .buddy-av-img {
+        height: 83px;
+        width: 83px;
+    }
+
+    .circle {
+
+        height: 92px;
+        width: 92px;
+
+    }
+
+    #cir0 {
+        margin-right: 5%;
+        margin-left: -9px;
+    }
+
+    #cir1 {
+        margin-left: 4%;
+    }
+
+    #cir2 {
+        margin-right: 71px;
+        margin-left: 90px;
+    }
+
+    #cir3 {
+        margin-left: 34px;
+    }
+
+    #cir4 {
+        margin-left: 83px;
+    }
+
+    #cir5 {
+        margin-left: 85px;
+    }
+}
 
 @media (max-width:1200px) {
 
@@ -730,23 +839,6 @@ a.circle {
 
 }
 
-@media screen and (min-width:1330px) {
-    header.masthead {
-        text-align: center;
-        color: #212529;
-        background-attachment: scroll;
-        background-position: center center;
-        background-size: cover;
-        position: relative;
-        height: 331px;
-        margin-top: -3%;
-    }
-
-    .cat-text {
-        margin-top: 156px;
-        font-size: 25px;
-    }
-}
 
 @media screen and (min-width:1200px) {
     #left-bucket {
