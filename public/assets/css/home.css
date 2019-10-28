@@ -539,69 +539,87 @@ a.circle {
 
 @media (max-width: 1500px) {
     .cat-text {
-        font-size: 39px;
+        font-size: 35px;
     }
+
     #left-bucket {
         margin-left: -58%;
     }
+
     #user-profile-list {
         margin-left: 87px;
     }
+
     #bucklist-header {
         margin-left: -112px;
     }
+
     #user-console {
         margin-left: 60%;
         margin-top: -4px;
     }
-}
-#buddy-row-paint {
-    max-width: 116%;
-    height: auto;
-    margin-top: 6%;
-    margin-left: -8%;
-}
 
+    #buddy-row-paint {
+        max-width: 116%;
+        height: auto;
+        margin-top: 6%;
+        margin-left: -8%;
+    }
 }
 
 
 @media (max-width:1200px) {
+
+    #bucklist-header {
+        margin-left: -9px;
+    }
+
     #avatar-icon-row {
-        margin-left: 38px;
+        margin-left: 15px;
+        width: 110%;
     }
 
     #cir1 {
-        margin-left: 1%;
+        margin-left: 2%;
     }
 
     #cir2 {
 
-        margin-left: 60px;
+        margin-left: 79px;
         margin-right: 20px;
     }
 
     #cir3 {
-        margin-left: 55px;
+        margin-left: 73px;
 
     }
 
     #cir4 {
-        margin-left: 60px;
+        margin-left: 74px;
     }
 
     #cir5 {
-        margin-left: 57px;
+        margin-left: 67px;
     }
 
     #user-console {
-        margin-top: 45px;
+        margin-top: -13px;
+        margin-left: 52%;
     }
 
     .cat-text {
         font-size: 27px;
     }
 
+    #buddy-row-paint {
+        max-width: 112%;
+        height: auto;
+        margin-top: 5%;
+        margin-left: -4%;
+    }
 }
+
+
 
 @media (max-width: 995px) {
 
@@ -615,6 +633,7 @@ a.circle {
         height: 208px;
         margin-top: 0%;
     }
+
     .cat-text {
         padding: 18px;
         margin-top: 86px;
@@ -711,7 +730,7 @@ a.circle {
 
 }
 
-@media screen and (min-width:1330px)  {
+@media screen and (min-width:1330px) {
     header.masthead {
         text-align: center;
         color: #212529;
@@ -725,6 +744,7 @@ a.circle {
 
     .cat-text {
         margin-top: 156px;
+        font-size: 25px;
     }
 }
 
@@ -751,6 +771,7 @@ a.circle {
         height: 209px;
         margin-top: -3%;
     }
+
     #rom-txt {
         margin-left: 2px;
         margin-right: 2px;
@@ -790,14 +811,14 @@ a.circle {
 
     #all-txt {
         margin-left: -20px;
-       
+
 
     }
 
     .cat-text {
         margin-top: 90px;
         padding: 18px;
-        font-size: 24px ;
+        font-size: 24px;
     }
 
 
@@ -843,7 +864,7 @@ a.circle {
     #buddy-row-paint {
         /* height: 215px; */
         /* margin-left: -18%; */
-        max-width: 100%;
+        max-width: 102%;
         height: auto;
 
 
@@ -875,11 +896,11 @@ a.circle {
         margin-left: 19px;
     }
 
-   
+
 
 }
 
-@media (max-width: 830px){
+@media (max-width: 830px) {
     .cat-text {
         font-size: 22px;
         margin-top: 86px;
@@ -889,18 +910,22 @@ a.circle {
         margin-left: -32px;
     }
 }
+
 @media (max-width: 768px) {
-    html, body {
+
+    html,
+    body {
         max-width: 100%;
         overflow-x: hidden;
     }
+
     #bucklist-header {
         margin-left: -35%;
         display: block;
         margin-top: 15%;
-        
+
     }
-    
+
     #left-bucket {
         max-width: 460px;
         display: block;
@@ -932,15 +957,17 @@ a.circle {
     #avatar-icon-row {
         margin-left: 16px;
         margin-top: -113px;
-        width: 126% ;
+        width: 126%;
     }
 
     #cir1 {
         margin-left: 5px;
     }
+
     #cir2 {
         margin-left: 30px;
     }
+
     #cir3 {
         margin-left: 49px;
     }
@@ -948,8 +975,8 @@ a.circle {
     #cir4 {
         margin-left: 30px;
     }
+
     #cir5 {
         margin-left: 24px;
     }
 }
-
