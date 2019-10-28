@@ -572,6 +572,12 @@ a.circle {
         width: 174% !important;
         margin-left: -74% !important;
     }
+
+    #left-bucket {
+        max-width: 1550px;
+        margin-left: -58%;
+    }
+    
 }
 
 @media (max-width: 1500px) {
